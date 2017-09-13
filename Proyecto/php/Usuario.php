@@ -87,8 +87,6 @@
 						}
 						break;
 					case 'Instructor':
-						$tipoUsuario = func_get_arg(0);
-						$tipoUsuario = 2;
 						$encriptar = password_hash($this->Contrasena,PASSWORD_DEFAULT,array("cost"=>15));
 						$insertarInstructor = $Conexion->prepare("INSERT INTO instructor (NombreUsuario) VALUES (:NombreUsuario)");
 						$insertarInstructor->execute(array(":NombreUsuario"=>$this->NombreUsuario));
@@ -101,7 +99,7 @@
 								$idInstructor = $fila["idInstructor"];
 							}
 							$resultado = $Conexion->prepare("INSERT INTO usuario (Nombres,Apellidos,NombreUsuario,Email,Contrasena,Foto,FK_UsuarioInstructor) VALUES (:Nom,:Ape,:NU,:Correo,:pwrd,:Foto,:FK_UsuarioInstructor)");
-					        $resultado->execute(array(":Nom"=>$this->Nombres,":Ape"=>$this->Apellidos,":NU"=>$this->NombreUsuario,":Correo"=>$this->Email,":pwrd"=>$encriptar,":Foto"=>$this->Foto,":FK_UsuarioInstructor"=>$tipoUsuario));
+					        $resultado->execute(array(":Nom"=>$this->Nombres,":Ape"=>$this->Apellidos,":NU"=>$this->NombreUsuario,":Correo"=>$this->Email,":pwrd"=>$encriptar,":Foto"=>$this->Foto,":FK_UsuarioInstructor"=>$idInstructor));
 					        if($resultado->rowCount()>0)
 					        {
 					        	echo "<script languague='javascript'>alert('Registro realizado exitosamente'); location.href='../login-Aprendiz.php'</script>";
@@ -114,20 +112,29 @@
 						}
 						break;
 					case 'Administrador':
-						$tipoUsuario = func_get_arg(0);
-						$tipoUsuario = 3;
 						$encriptar = password_hash($this->Contrasena,PASSWORD_DEFAULT,array("cost"=>15));
-						$resultado = $Conexion->prepare("INSERT INTO usuario (Nombres,Apellidos,NombreUsuario,Email,Contrasena,Foto,FK_UsuarioAdministrador) VALUES (:Nom,:Ape,:NU,:Correo,:pwrd,:Foto,:FK_UsuarioAdministrador)");
-				        $resultado->execute(array(":Nom"=>$this->Nombres,":Ape"=>$this->Apellidos,":NU"=>$this->NombreUsuario,":Correo"=>$this->Email,":pwrd"=>$encriptar,":Foto"=>$this->Foto,":FK_UsuarioAdministrador"=>$tipoUsuario));
-				        if($resultado->rowCount()>0)
-				        {
-				        	echo "<script languague='javascript'>alert('Registro realizado exitosamente'); location.href='../login-Aprendiz.php'</script>";
-				        }
-				        else
-				        {
-				        	print_r($resultado->errorInfo());
-				        	echo "<script languague='javascript'>alert('Error al registrar los datos, por favor intente nuevamente'); location.href='../login-Aprendiz.php#signup'</script>";
-				        }
+						$insertarAdministrador = $Conexion->prepare("INSERT INTO Administrador (NombreUsuario) VALUES (:NombreUsuario)");
+						$insertarInstructor->execute(array(":NombreUsuario"=>$this->NombreUsuario));
+						if ($insertarAdministrador->rowCount()>0)
+						{
+							$consultarAdministrador = $Conexion->prepare("SELECT idAdministrador FROM administrador WHERE NombreUsuario = :NombreUsuario");
+							$consultaInstructor->execute(array(":NombreUsuario"=>$this->NombreUsuario));
+							while ($fila = $consultarAdministrador->fetch(PDO::FETCH_ASSOC))
+							{
+								$idAdministrador = $fila["idAdministrador"];
+							}
+							$resultado = $Conexion->prepare("INSERT INTO usuario (Nombres,Apellidos,NombreUsuario,Email,Contrasena,Foto,FK_UsuarioAdministrador) VALUES (:Nom,:Ape,:NU,:Correo,:pwrd,:Foto,:FK_UsuarioAdministrador)");
+					        $resultado->execute(array(":Nom"=>$this->Nombres,":Ape"=>$this->Apellidos,":NU"=>$this->NombreUsuario,":Correo"=>$this->Email,":pwrd"=>$encriptar,":Foto"=>$this->Foto,":FK_UsuarioAdministrador"=>$idAdministrador));
+					        if($resultado->rowCount()>0)
+					        {
+					        	echo "<script languague='javascript'>alert('Registro realizado exitosamente'); location.href='../login-Aprendiz.php'</script>";
+					        }
+					        else
+					        {
+					        	print_r($resultado->errorInfo());
+					        	echo "<script languague='javascript'>alert('Error al registrar los datos, por favor intente nuevamente'); location.href='../login-Aprendiz.php#signup'</script>";
+					        }							
+						}
 						break;	
 					default:
 						break;
