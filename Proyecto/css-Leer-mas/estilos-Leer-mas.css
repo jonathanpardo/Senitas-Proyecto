@@ -1,0 +1,7 @@
+
+#oculto
+{
+	/*Con esta instruccion hacemos q el texto a mostrar este oculto de manera predeterminada al ingresar a la pagina por primera ves*/
+	display: none;
+}
+
