@@ -116,7 +116,7 @@
 
         <div id="register" class="animate form registration_form">
           <section class="login_content">
-            <form action="php/Registrarse.php" method="post">
+            <form action="php/RegistrarseAprendiz.php" method="post">
               <h1>Crear Cuenta</h1>
                 <div>
                 <input type="text" class="form-control" placeholder="Nombre" required="on" name="Nombres" />
