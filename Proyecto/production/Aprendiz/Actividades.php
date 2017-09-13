@@ -201,7 +201,7 @@
                      <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
-                  <h1> Actividades</h1>
+                  <h1> Cursos</h1>
                
                   
                                   
@@ -223,24 +223,16 @@
                   <div class="clearfix"></div>
                 </div>
                 
-                <h2>FICHAS:
-                       <select name="Nombre-Instructor">
-                    
-
-                        <option>11123144-G1</option>
-
-                        <option>123123241-G2</option>
-
-                        <option>1231414-G3</option>
-
-                     </select></h2>
-                <li><a href="Subir-Actividades.php">Actividad-1</a></li>
-                <li><a href="Subir-Actividades.php">Actividad-2</a></li>
-                <li><a href="Subir-Actividades.php">Actividad-3</a></li>
-                <li><a href="Subir-Actividades.php">Actividad-4</a></li>
-                <li><a href="Subir-Actividades.php">Actividad-5</a></li>
-                <li><a href="Subir-Actividades.php">Actividad-6</a></li>
-                <li><a href="Subir-Actividades.php">Actividad-7</a></li>  
+                <h2>FICHAS:</h2>
+                <li><a href="Elejir-Actividades.php">12334-G1</a></li>
+                <li><a href="Elejir-Actividades.php">12334-G1</a></li>
+                <li><a href="Elejir-Actividades.php">12334-G1</a></li>
+                <li><a href="Elejir-Actividades.php">12334-G1</a></li>
+                <li><a href="Elejir-Actividades.php">12334-G1</a></li>
+                <li><a href="Elejir-Actividades.php">12334-G1</a></li>
+                <li><a href="Elejir-Actividades.php">12334-G1</a></li>
+                
+                
               </div>
             </div>
 
@@ -248,9 +240,7 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                          <button type="button" class="btn btn-primary">Cancelar</button>
-						   <button class="btn btn-primary" type="reset">Reiniciar</button>
-                          <button type="submit" class="btn btn-success">Subir Actividad</button>
+                          
                         </div>
                       </div>
 

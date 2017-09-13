@@ -174,7 +174,7 @@
           <div class="container">
              <div class="row">
             <?php include("../../php/leerMensajes.php"); ?>
-            Menu: <a href="Bandeja-de-Entrada.php">Ver mensajes</a> | <a href="crearMensajes.php">Nuevo mensaje</a> <br /><br />
+            Menu: <a href="Bandeja-de-Entrada.php">Ver mensajes</a> | <a href="CrearMensaje.php">Nuevo mensaje</a> <br /><br />
             <strong>De:</strong> <?=$row['de']?><br />
             <strong>Fecha:</strong> <?=$row['fecha']?><br />
             <strong>Asunto:</strong> <?=$row['asunto']?><br /><br />
