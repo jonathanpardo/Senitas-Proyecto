@@ -54,7 +54,7 @@
 			$consulta->execute(array(":NombreUsuario"=>$this->NombreUsuario));
 			if (($fila = $consulta->fetch(PDO::FETCH_ASSOC))!=NULL)
 			{
-				echo "<script languague='javascript'>alert('El nombre de usuario ya se encuentra registrado. Por favor seleccione otro e intente nuevamente');location.href='../login-Aprendiz.php#signup'</script>";
+				echo "<script languague='javascript'>alert('El nombre de usuario ya se encuentra registrado. Por favor seleccione otro e intente nuevamente');location.href='../login-Aprendiz.php'</script>";
 			}
 			else
 			{
@@ -102,12 +102,12 @@
 					        $resultado->execute(array(":Nom"=>$this->Nombres,":Ape"=>$this->Apellidos,":NU"=>$this->NombreUsuario,":Correo"=>$this->Email,":pwrd"=>$encriptar,":Foto"=>$this->Foto,":FK_UsuarioInstructor"=>$idInstructor));
 					        if($resultado->rowCount()>0)
 					        {
-					        	echo "<script languague='javascript'>alert('Registro realizado exitosamente'); location.href='../login-Aprendiz.php'</script>";
+					        	echo "<script languague='javascript'>alert('Registro realizado exitosamente'); location.href='../login-instructor.html'</script>";
 					        }
 					        else
 					        {
 					        	print_r($resultado->errorInfo());
-					        	echo "<script languague='javascript'>alert('Error al registrar los datos, por favor intente nuevamente'); location.href='../login-Aprendiz.php#signup'</script>";
+					        	echo "<script languague='javascript'>alert('Error al registrar los datos, por favor intente nuevamente'); location.href='../registrarse-instructor.php'</script>";
 					        }
 						}
 						break;
