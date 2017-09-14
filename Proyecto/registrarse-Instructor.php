@@ -11,27 +11,20 @@
   
     <h1 class="formulario__titulo">Registrar Instructor</h1>
    
-    <input type="text" class="formulario__input" name="Nombres">
-    <label for="" class="formulario__label">Nombre</label>
+    <input type="text" class="formulario__input" name="Nombres" placeholder="Nombres">
     
-    <input type="text" class="formulario__input" name="Apellidos">
-      <label for="" class="formulario__label">Apellido</label>
+    <input type="text" class="formulario__input" name="Apellidos" placeholder="Apellidos">
        
-    <input type="text" class="formulario__input" name="Usuario">
-    <label for="" class="formulario__label">Usuario</label>
+    <input type="text" class="formulario__input" name="Usuario" placeholder="Usuario">
     
-    <input type="Email" class="formulario__input" name="Email">
-    <label for="" class="formulario__label">Email</label>
+    <input type="Email" class="formulario__input" name="Email" placeholder="Email">
     
-    <input type="password" class="formulario__input" name="Contrasena">
-      <label for="" class="formulario__label">Contraseña</label>
+    <input type="password" class="formulario__input" name="Contrasena" placeholder="Contrasena">
        
-    <input type="password" class="formulario__input" name="Confirmar">
-    <label for="" class="formulario__label">Confirmar contraseña</label>
+    <input type="password" class="formulario__input" name="Confirmar" placeholder="Confirmar contraseña">
     
    
-    <input type="text" class="formulario__input">
-    <label for="" class="formulario__label">Codigo Instructor</label>
+    <input type="text" class="formulario__input" placeholder="Codigo instructor">
     
     <a type="submit" class="formulario__submit"  href="login-Instructor.html">Salir</a>
     
