@@ -1,5 +1,4 @@
-<?php 
-	error_reporting(E_ALL ^ E_DEPRECATED);
+<?php
 	$Conexion = Conexion::Conectar();
 	$resultado = $Conexion->prepare("SELECT * FROM mensaje WHERE para=:Usuario and leido IS NULL");
 	$resultado->execute(array("Usuario"=>$_SESSION['Usuario']));

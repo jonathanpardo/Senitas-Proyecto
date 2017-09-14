@@ -68,7 +68,6 @@
                             $resultado = $Conexion->prepare("INSERT INTO usuario (Nombres,Apellidos,NombreUsuario,Email,Contrasena,Foto,FK_UsuarioAprendiz) VALUES (:Nom,:Ape,:NU,:Correo,:pwrd,:Foto,:FK_UsuarioAprendiz)");
                             $resultado->execute(array(":Nom"=>$this->Nombres,":Ape"=>$this->Apellidos,":NU"=>$this->NombreUsuario,":Correo"=>$this->Email,":pwrd"=>$encriptar,":Foto"=>$this->Foto,":FK_UsuarioAprendiz"=>$idAprendiz));
                             if ($resultado->rowCount()>0) {
-                                echo $idAprendiz;
                                 echo "<script languague='javascript'>alert('Registro realizado exitosamente'); location.href='../login-Aprendiz.php'</script>";
                             } else {
                                 print_r($resultado->errorInfo());

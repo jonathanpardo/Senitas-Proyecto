@@ -1,4 +1,4 @@
-<?php 
+<?php
 	include_once('Conexion.php');
 
 	function ObtenerDatos($NombreUsuario)
@@ -13,15 +13,15 @@
 				case 2:
 					return $fila[func_get_arg(1)];
 					break;
-				case 3:				
+				case 3:
 					if (func_get_arg(1)=="Nombres" && func_get_arg(2)=="Apellidos")
-					{						
+					{
 						return ucwords($fila[func_get_arg(1)] . " " .  $fila[func_get_arg(2)]);
 					}
 					break;
 				default:
 					break;
-			}			
+			}
 		}
 	}
  ?>
