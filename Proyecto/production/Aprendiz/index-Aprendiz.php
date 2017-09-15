@@ -6,12 +6,8 @@
 			include("../../php/DatosUsuario.php");
       include("../../php/bandejaEntrada.php");
       include("../../php/verificarTipoUsuario.php");
-      if (verificarUsuario("aprendiz")>0) {
-        echo "<script languague='javascript'>alert(':)');</script>";
+      if (!isset($_SESSION['Usuario']) || verificarUsuario("aprendiz") == 0){
         header("location:../../login-Aprendiz.php");
-      }
-			if (!isset($_SESSION['Usuario']))
-			{
 			}
 		?>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">

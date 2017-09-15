@@ -4,13 +4,18 @@
         switch ($tipoUsuario) {
             case "aprendiz":
                 $Conexion = Conexion::Conectar();
-                $resultado = $Conexion->prepare("SELECT * FROM usuario WHERE NombreUsuario = :NombreUsuario AND FK_usuarioAprendiz IS NOT NULL");
+                $resultado = $Conexion->prepare("SELECT * FROM usuario WHERE NombreUsuario = :NombreUsuario");
                 $resultado->execute(array(":NombreUsuario"=>$_SESSION['Usuario']));
                 $registros = $resultado->rowCount();
+                if ($registros == 0) {
+                    
+
+                    $usuario
+                }
                 return $registros;
                 break;
             default:
-						echo ":)))))))))";
                 break;
         }
     }
+?>
