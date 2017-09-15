@@ -10,17 +10,13 @@
     </head>
     <body>
         <?php
-            if (isset($_POST["Enviar"]))
-            {
-                if ($_POST["Contrasena"] == $_POST["Confirmar"])
-                {
+            if (isset($_POST["Enviar"])) {
+                if ($_POST["Contrasena"] == $_POST["Confirmar"]) {
                     include("Instructor.php");
-                    $NuevoUsuario = new Instructor(ucwords($_POST["Nombres"]),ucwords($_POST["Apellidos"]),$_POST["Usuario"],$_POST["Email"],$_POST["Contrasena"],"../../FotosPerfil/user.png");
+                    $NuevoUsuario = new Instructor(ucwords($_POST["Nombres"]), ucwords($_POST["Apellidos"]), $_POST["Usuario"], $_POST["Email"], $_POST["Contrasena"], "../../FotosPerfil/user.png");
                     $NuevoUsuario->Registrarse();
-                }             
-                else
-                {
-                    echo "<script languaje='javascript'>alert('Las contraseñas no coinciden, por favor intentelo nuevamente');location.href='../registrarse-instructor.php'</script>"; 
+                } else {
+                    echo "<script languaje='javascript'>alert('Las contraseñas no coinciden, por favor intentelo nuevamente');location.href='../registrarse-instructor.php'</script>";
                 }
             }
         ?>

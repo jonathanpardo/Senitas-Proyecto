@@ -201,7 +201,7 @@
                      <div class="col-md-12 col-sm-12 col-xs-12">
               <div class="x_panel">
                 <div class="x_title">
-                  <h2>Subir Actividades</h2>
+                  <h1>Subir Actividades</h1>
                   <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                     </li>
@@ -319,8 +319,7 @@
                       <div class="form-group">
                         <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                           <button type="button" class="btn btn-primary">Cancelar</button>
-						   <button class="btn btn-primary" type="reset">Reiniciar</button>
-                          <button type="submit" class="btn btn-success">Subir Actividad</button>
+						  <button type="submit" class="btn btn-success">Subir Actividad</button>
                         </div>
                       </div>
 

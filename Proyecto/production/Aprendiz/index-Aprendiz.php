@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
   <head>
    <?php
 			include('../../php/Sesion.php');
 			include("../../php/DatosUsuario.php");
       include("../../php/bandejaEntrada.php");
-			if (!isset($_SESSION['Usuario']))
-			{
-				header("location:../../login-Aprendiz.php");
+      include("../../php/verificarTipoUsuario.php");
+      if (!isset($_SESSION['Usuario']) || verificarUsuario("aprendiz") == 0){
+        header("location:../../login-Aprendiz.php");
 			}
 		?>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -30,11 +30,11 @@
     <!-- Custom Theme Style -->
     <link href="../../build/css/custom.min.css" rel="stylesheet">
     <!--- Estilos Noticias-->
-  
+
     <link href="../../assets/css/Estilo-Noticias.css" rel="stylesheet">
     <link id="color-scheme" href="../../assets/css/colors/default.css" rel="stylesheet">
-    
-    <!--- -->    
+
+    <!--- -->
   </head>
 
   <body class="nav-md">
@@ -69,36 +69,36 @@
                 <ul class="nav side-menu">
                   <li><a href="index-Aprendiz.php"><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                     
+
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Cursos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="seleccionar-Cursos.php">Consultar Cursos disponibles</a></li>
-                      
-                      
-                      
+
+
+
                     </ul>
                   </li>
                   <li><a href="Mis-Calificaciones.php"><i class="fa fa-edit"></i> Mis Calificaciones <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      
-                      
+
+
                     </ul>
                   </li>
-                  
+
                   <li><a><i class="fa fa-table"></i> Reportes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="Generar-Reporte-Error.php">Generar reportes  de Error</a></li>
-                      
+
                     </ul>
                   </li>
-                  
-                  
+
+
                 </ul>
               </div>
               <div class="menu_section">
-                
+
                 <ul class="nav side-menu">
                   <li><a href="Bandeja-de-Entrada.php"><i class="fa fa-bug"></i> Bandeja de Entrada
                   <?php
@@ -106,7 +106,7 @@
                   {
                     ?>
                     <span class="label label-danger pull-right"><?php echo "tienes $tot mensaje nuevo";?></span>
-                    <?php                    
+                    <?php
                   }
                   else if(mensajessinleer()>1)
                   {
@@ -119,9 +119,9 @@
                     <ul class="nav child_menu">
                     </ul>
                   </li>
-                  
+
                   <li><a href="Actividades.php"><i class="fa fa-sitemap"></i> Subir Actividades <span class="fa fa-chevron-down"></span></a>
-                   
+
               </div>
 
             </div>
@@ -166,13 +166,13 @@
 											<li><a href="Actualizar_datos.php">Actualizar Datos</a></li>
 											<li><a href="BorrarCuenta.php">Borrar Cuenta</a></li>
 										</li>
-										
-										
+
+
 										<li><a href="../../php/CerrarSesion.php"><i class="fa fa-sign-out pull-right"></i> Salir </a></li>
 									</ul>
                 </li>
 
-                
+
               </ul>
             </nav>
           </div>
@@ -182,28 +182,28 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
-           
 
-            
+
+
 <section class="module">
           <div class="container">
             <div class="row">
-             
+
              <h1>Anuncios:</h1>
-           
+
               <div class="col-sm-8 col-sm-offset-1">
                 <div class="post">
                   <div class="post-thumbnail"><a href="http://www.insor.gov.co/personas-sordas-en-la-construccion-de-paz/"><img src="../../assets/images/Noticia1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
                     <h2 class="post-title"><a href="#">Personas sordas en la construcción de paz</a></h2>
                     <div class="post-meta">By&nbsp;<a href="#">INSOR</a>| 25 de Julio de 2017<a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-                    
-                
-                
+
+
+
 
                     </div>
                   </div>
-                  
+
                   <div class="post-entry">
                     <p>
 
@@ -211,7 +211,7 @@ Aunque en los últimos años la población sorda ha logrado importantes avances 
                   </div>
                   <div class="post-more"><a class="more-link" href="http://www.insor.gov.co/personas-sordas-en-la-construccion-de-paz/">LEER MÁS</a></div>
                 </div>
-                
+
                 <div class="post">
                   <div class="post-thumbnail"><a href="http://www.insor.gov.co/mas-de-100-entidades-publicas-comprometidas-con-la-atencion-a-la-poblacion-sorda/"><img src="../../assets/images/post-4.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
@@ -220,7 +220,7 @@ Aunque en los últimos años la población sorda ha logrado importantes avances 
 
                     </div>
                   </div>
-                  
+
                   <div class="post-entry">
                     <p>
 
@@ -228,16 +228,16 @@ A través de la participación de la Subdirección de Promoción y Desarrollo de
                   </div>
                   <div class="post-more"><a class="more-link" href="http://www.insor.gov.co/mas-de-100-entidades-publicas-comprometidas-con-la-atencion-a-la-poblacion-sorda/">LEER MÁS</a></div>
                 </div>
-                
+
                 <div class="post">
                   <div class="post-thumbnail"><a href="http://www.insor.gov.co/el-insor-celebro-la-inclusion-de-la-lengua/"><img src="../../assets/images/Noticia3.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
                     <h2 class="post-title"><a href="#">El INSOR Celebró la Inclusión de la Lengua de Señas Colombiana como Lengua Nativa</a></h2>
                     <div class="post-meta">By&nbsp;<a href="#">Insor-</a> <a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-                    
+
                     </div>
                   </div>
-                  
+
                   <div class="post-entry">
                     <p>
 
@@ -247,27 +247,27 @@ Para la transparencia en nuestra gestión, contamos con un Plan Anticorrupción 
                   </div>
                   <div class="post-more"><a class="more-link" href="http://www.insor.gov.co/el-insor-celebro-la-inclusion-de-la-lengua/">LEER MÁS</a></div>
                 </div>
-                
+
                 <div class="post">
                   <div class="post-thumbnail"><a href="http://www.eltiempo.com/vida/educacion/educacion-inclusiva-en-colombia-96076"><img src="../../assets/images/Noticia4.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
                     <h2 class="post-title"><a href="#"> Universidad Sergio Arboleda ofrece primeros posgrados para sordos</a></h2>
                     <div class="post-meta">By&nbsp;<a href="#">Jonathan Alexis Pardo</a>| 23 November | 3 Comments | <a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-                    
+
                     </div>
                   </div>
-                  
+
                   <div class="post-entry">
                     <p>
 
-La Universidad Sergio Arboleda de Bogotá ofrecerá los primeros posgrados en Colombia dirigidos para personas con discapacidad auditiva, según informó la institución educativa. 
+La Universidad Sergio Arboleda de Bogotá ofrecerá los primeros posgrados en Colombia dirigidos para personas con discapacidad auditiva, según informó la institución educativa.
 
 Los tres primeros posgrados han sido desarrollados en colaboración con el Instituto Nacional para Sordos (Insor) y todos ellos podrán estudiarse en la Escuela de Educación.. .</p>
                   </div>
                   <div class="post-more"><a class="more-link" href="http://www.eltiempo.com/vida/educacion/educacion-inclusiva-en-colombia-96076">LEER MÁS</a></div>
                 </div>
                 <div class="post">
-                  
+
                 </div>
                 <div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
               </div>
@@ -275,11 +275,11 @@ Los tres primeros posgrados han sido desarrollados en colaboración con el Insti
           </div>
         </section>
 
-           
 
 
 
-           
+
+
           </div>
         </div>
         <!-- /page content -->
@@ -322,7 +322,7 @@ Los tres primeros posgrados han sido desarrollados en colaboración con el Insti
     <!-- bootstrap-daterangepicker -->
     <script src="../../vendors/moment/min/moment.min.js"></script>
     <script src="../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
-    
+
     <!-- Custom Theme Scripts -->
     <script src="../../build/js/custom.min.js"></script>
   </body>
