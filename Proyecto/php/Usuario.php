@@ -129,9 +129,6 @@
             $resultado->execute(array(":NU"=>$this->NombreUsuario));
             if ($registro = $resultado->fetch(PDO::FETCH_ASSOC)) {
                 if (password_verify($this->Contrasena, $registro['Contrasena'])) {
-                    if (isset($_SESSION['Usuario'])) {
-                        session_destroy();
-                    }
                     include("Sesion.php");
                     iniciarSesion($this->NombreUsuario);
                     if ($Recordar == true) {
