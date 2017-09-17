@@ -34,7 +34,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="Instructor.html" class="site_title"><i class="fa fa-hand-o-down"></i> <span>Señitas!</span></a>
+              <a href="Instructor.php" class="site_title"><i class="fa fa-hand-o-down"></i> <span>Señitas!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -58,30 +58,30 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="Instructor.html"><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="Instructor.php"><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                      
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Ejecucucion de la formacion <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Consultar-rutaAprendiz.html">Consultar ruta del Aprendiz</a></li>
-                      <li><a href="Generar-constancia-aprendiz.html">Generar constancia de aprendiz</a></li>
-                      <li><a href="gestionar-ruta-de-aprendizaje.html">Gestion ruta de aprendizaje</a></li>
+                      <li><a href="Consultar-rutaAprendiz.php">Consultar ruta del Aprendiz</a></li>
+                      <li><a href="Generar-constancia-aprendiz.php">Generar constancia de aprendiz</a></li>
+                      <li><a href="gestionar-ruta-de-aprendizaje.php">Gestion ruta de aprendizaje</a></li>
                       
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Gestion de Ambientes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Consultar-Listado-de-aprendices.html">Consultar listado de Aprendices</a></li>
+                      <li><a href="Consultar-Listado-de-aprendices.php">Consultar listado de Aprendices</a></li>
                       
-                      <li><a href="Descargar-Listado-de-Notas.html">descargar Listado de Notas</a></li>
+                      <li><a href="Descargar-Listado-de-Notas.php">descargar Listado de Notas</a></li>
                       
                     </ul>
                   </li>
                   <li><a><i class="fa fa-table"></i> Reportes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Generar-Reporte-Error.html">Generar reportes  de Error</a></li>
+                      <li><a href="Generar-Reporte-Error.php">Generar reportes  de Error</a></li>
                       
                     </ul>
                   </li>
@@ -98,7 +98,7 @@
                     </ul>
                   </li>
                   
-                  <li><a href="Subir-Actividades.html"><i class="fa fa-sitemap"></i> Subir Actividades <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="Subir-Actividades.php"><i class="fa fa-sitemap"></i> Subir Actividades <span class="fa fa-chevron-down"></span></a>
                    
               </div>
 
@@ -167,7 +167,7 @@
             
             <div class="x_panel">
                   <div class="x_title">
-                    <h2>Asociar Aprendiz a una ruta de Aprendizaje <small></small></h2>
+                    <h2>Generar certificado del Aprendiz <small></small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -190,17 +190,19 @@
                     <form class="form-horizontal form-label-left input_mask">
 
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Ficha de caracterizacion">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre">
                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                       </div>
 
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Ruta de Aprendizaje">
+                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Apellido">
                         <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                       </div>
                       
-                     
-                      
+                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Ficha">
+                        <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
+                      </div>
                       <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
@@ -234,11 +236,12 @@
                             <th>
                               <input type="checkbox" id="check-all" class="flat">
                             </th>
-                            <th class="column-title">Identificacion </th>
+                            <th class="column-title">Ficha </th>
+                            <th class="column-title">Fecha inicio </th>
+                            <th class="column-title">Fecha Final </th>
                             <th class="column-title">Nombre </th>
                             <th class="column-title">Apellido </th>
-                            <th class="column-title">Ruta de Aprendizaje </th>
-                                                        
+                            <th class="column-title">cedula </th>
                             <th class="column-title no-link last"><span class="nobr">Estado de formacion</span>
                             </th>
                             <th class="bulk-actions" colspan="7">
@@ -253,11 +256,11 @@
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
                             <td class=" ">121000040</td>
-                            
-                            
+                            <td class=" ">May 23, 2014 11:47:56 PM </td>
+                            <td class=" ">May 23, 2014 11:47:56 PM  <i ></i></td>
                             <td class=" ">John Blank L</td>
                             <td class=" ">Paid</td>
-                            <td class="a-right a-right ">Ruta 2F ficha 11123123 grupo 2</td>
+                            <td class="a-right a-right ">1000513925</td>
                             <td class=" last"><a href="#">Activo</a>
                             </td>
                           </tr>
@@ -266,11 +269,12 @@
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
                             <td class=" ">121000039</td>
-                            
-                            
+                            <td class=" ">May 23, 2014 11:30:12 PM</td>
+                            <td class=" ">May 23, 2014 11:47:56 PM  <i ></i>
+                            </td>
                             <td class=" ">John Blank L</td>
                             <td class=" ">Paid</td>
-                            <td class="a-right a-right ">Ruta 2F ficha 11123123 grupo 2</td>
+                            <td class="a-right a-right ">1000513925</td>
                             <td class=" last"><a href="#">Activo</a>
                             </td>
                           </tr>
@@ -279,11 +283,12 @@
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
                             <td class=" ">121000038</td>
-                           
-                           
+                            <td class=" ">May 24, 2014 10:55:33 PM</td>
+                            <td class=" ">May 23, 2014 11:47:56 PM  <i ></i>
+                            </td>
                             <td class=" ">Mike Smith</td>
                             <td class=" ">Paid</td>
-                            <td class="a-right a-right ">Ruta 2F ficha 11123123 grupo 2</td>
+                            <td class="a-right a-right ">1000513925</td>
                             <td class=" last"><a href="#">Activo</a>
                             </td>
                           </tr>
@@ -292,11 +297,11 @@
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
                             <td class=" ">121000037</td>
-                            
-                           
+                            <td class=" ">May 24, 2014 10:52:44 PM</td>
+                            <td class=" ">May 23, 2014 11:47:56 PM </td>
                             <td class=" ">Mike Smith</td>
                             <td class=" ">Paid</td>
-                            <td class="a-right a-right ">Ruta 2F ficha 11123123 grupo 2</td>
+                            <td class="a-right a-right ">1000513925</td>
                             <td class=" last"><a href="#">Activo</a>
                             </td>
                           </tr>
@@ -305,11 +310,11 @@
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
                             <td class=" ">121000040</td>
-                            
-                           
+                            <td class=" ">May 24, 2014 11:47:56 PM </td>
+                            <td class=" ">May 23, 2014 11:47:56 PM </td>
                             <td class=" ">John Blank L</td>
                             <td class=" ">Paid</td>
-                            <td class="a-right a-right ">Ruta 2F ficha 11123123 grupo 2</td>
+                            <td class="a-right a-right ">1000513925</td>
                             <td class=" last"><a href="#">Aplazado</a>
                             </td>
                           </tr>
@@ -318,11 +323,12 @@
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
                             <td class=" ">121000039</td>
-                            
-                            
+                            <td class=" ">May 26, 2014 11:30:12 PM</td>
+                            <td class=" ">May 23, 2014 11:47:56 PM  <i ></i>
+                            </td>
                             <td class=" ">John Blank L</td>
                             <td class=" ">Paid</td>
-                            <td class="a-right a-right ">Ruta 2F ficha 11123123 grupo 2</td>
+                            <td class="a-right a-right ">1000513925</td>
                             <td class=" last"><a href="#">cancelado</a>
                             </td>
                           </tr>
@@ -331,11 +337,11 @@
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
                             <td class=" ">121000038</td>
-                            
-                            
+                            <td class=" ">May 26, 2014 10:55:33 PM</td>
+                            <td class=" ">May 23, 2014 11:47:56 PM </td>
                             <td class=" ">Mike Smith</td>
                             <td class=" ">Paid</td>
-                            <td class="a-right a-right ">Ruta 2F ficha 11123123 grupo 2</td>
+                            <td class="a-right a-right ">1000513925</td>
                             <td class=" last"><a href="#">Activo</a>
                             </td>
                           </tr>
@@ -344,11 +350,11 @@
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
                             <td class=" ">121000037</td>
-                            
-                           
+                            <td class=" ">May 26, 2014 10:52:44 PM</td>
+                            <td class=" ">May 23, 2014 11:47:56 PM </td>
                             <td class=" ">Mike Smith</td>
                             <td class=" ">Paid</td>
-                            <td class="a-right a-right ">Ruta 2F ficha 11123123 grupo 2</td>
+                            <td class="a-right a-right ">1000513925</td>
                             <td class=" last"><a href="#">Activo</a>
                             </td>
                           </tr>
@@ -358,11 +364,11 @@
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
                             <td class=" ">121000040</td>
-                            
-                            
+                            <td class=" ">May 27, 2014 11:47:56 PM </td>
+                            <td class=" ">May 23, 2014 11:47:56 PM </td>
                             <td class=" ">John Blank L</td>
                             <td class=" ">Paid</td>
-                            <td class="a-right a-right ">Ruta 2F ficha 11123123 grupo 2</td>
+                            <td class="a-right a-right ">1000513925</td>
                             <td class=" last"><a href="#">Activo</a>
                             </td>
                           </tr>
@@ -371,11 +377,11 @@
                               <input type="checkbox" class="flat" name="table_records">
                             </td>
                             <td class=" ">121000039</td>
-                            
-                            
+                            <td class=" ">May 28, 2014 11:30:12 PM</td>
+                            <td class=" ">May 23, 2014 11:47:56 PM </td>
                             <td class=" ">John Blank L</td>
                             <td class=" ">Paid</td>
-                            <td class="a-right a-right ">Ruta 2F ficha 11123123 grupo 2</td>
+                            <td class="a-right a-right ">1000513925</td>
                             <td class=" last"><a href="#">Activo</a>
                             </td>
                           </tr>
@@ -388,15 +394,124 @@
                 </div>
               </div>
 
-                    
-                     
+                     <div class="col-md-12 col-sm-12 col-xs-12">
+              <div class="x_panel">
+                <div class="x_title">
+                  <h2>Area de Texto<small>Sessions</small></h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Settings 1</a>
+                        </li>
+                        <li><a href="#">Settings 2</a>
+                        </li>
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div id="alerts"></div>
+                  <div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
+                    <div class="btn-group">
+                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                      </ul>
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
+                      <ul class="dropdown-menu">
+                        <li>
+                          <a data-edit="fontSize 5">
+                            <p style="font-size:17px">Huge</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a data-edit="fontSize 3">
+                            <p style="font-size:14px">Normal</p>
+                          </a>
+                        </li>
+                        <li>
+                          <a data-edit="fontSize 1">
+                            <p style="font-size:11px">Small</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
+                      <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
+                      <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
+                      <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="fa fa-list-ul"></i></a>
+                      <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="fa fa-list-ol"></i></a>
+                      <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
+                      <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="fa fa-indent"></i></a>
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
+                      <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
+                      <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
+                      <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="fa fa-link"></i></a>
+                      <div class="dropdown-menu input-append">
+                        <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
+                        <button class="btn" type="button">Add</button>
+                      </div>
+                      <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="fa fa-cut"></i></a>
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+                      <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
+                    </div>
+
+                    <div class="btn-group">
+                      <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
+                      <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+                    </div>
+                  </div>
+
+                  <div id="editor-one" class="editor-wrapper"></div>
+
+                  <textarea name="descr" id="descr" style="display:none;"></textarea>
+                  
+                  <br />
+
+                  <div class="ln_solid"></div>
+
+                  <div class="form-group">
+                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Área de texto redimensionable</label>
+                    <div class="col-md-9 col-sm-9 col-xs-12">
+                      <textarea class="resizable_textarea form-control" placeholder="Este área de texto redimensiona  modifica automáticamente su altura a medida que rellenas más texto ......"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+                      
                       
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                           <button type="button" class="btn btn-primary">Cancelar</button>
 						   <button class="btn btn-primary" type="reset">Reiniciar</button>
-                          <button type="submit" class="btn btn-success">Asociar a ruta de aprendizaje</button>
+                          <button type="submit" class="btn btn-success">Enviar Constancia</button>
                         </div>
                       </div>
 

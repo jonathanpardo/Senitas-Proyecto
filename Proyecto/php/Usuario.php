@@ -144,7 +144,7 @@
                             header('Location: ../production/aprendiz/index-Aprendiz.php');                            
                             break;
                         case 'Instructor':
-                            header('location: ../production/instructor/instructor.html');
+                            header('location: ../production/instructor/instructor.php');
                             break;
                         case 'Administrador':
                             header('location: ../production/Administrador/Administrador.html');
