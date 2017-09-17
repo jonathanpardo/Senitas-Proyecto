@@ -5,8 +5,11 @@
 			include('../../php/Sesion.php');
 			include("../../php/DatosUsuario.php");
 			include("../../php/verificarTipoUsuario.php");
-      if (!isset($_SESSION['Usuario']) || numeroUsuarios("aprendiz") == 0){
-        redireccionar(verificarUsuario());
+      if(!isset($_SESSION['Usuario'])){
+        header("location:../../login-Aprendiz.php");
+      }
+      if(numeroUsuarios("aprendiz") == 0) {
+          redireccionar(verificarUsuario());
       }
 		?>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
