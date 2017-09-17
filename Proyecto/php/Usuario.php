@@ -121,7 +121,7 @@
             }
         }
 
-        public function Ingresar($Pagina, $Recordar)
+        public function Ingresar($Recordar)
         {
             include('Conexion.php');
             $Conexion= Conexion::Conectar();
@@ -139,9 +139,19 @@
                     } else {
                         setcookie("RecordarUsuario", "", time()-1, "/");
                     }
-                    header('Location: ../production/aprendiz/index-Aprendiz.php');
+                    switch (func_get_arg(1)) {
+                        case 'aprendiz':
+                            header('Location: ../production/aprendiz/index-Aprendiz.php');                            
+                            break;
+                        case 'Instructor':
+                            header('location: ../production/instructor/instructor.html');
+                            break;
+                        default:
+                            # code...
+                            break;
+                    }
                 } else {
-                    echo "<script languague='javascript'>alert('Los datos ingresados son erroneos, verifique e intente nuevamente');location.href='$Pagina#signin'</script>";
+                    echo "<script languague='javascript'>alert('Los datos ingresados son erroneos, verifique e intente nuevamente');location.href='../login-Aprendiz.php'</script>";
                 }
             } else {
                 echo "<script languague='javascript'>alert('El nombre de usuario no se encuentra registrado, verifique e intente nuevamente');location.href='../login-Aprendiz.php'</script>";

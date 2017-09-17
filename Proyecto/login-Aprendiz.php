@@ -49,7 +49,7 @@
       <div class="login_wrapper">
         <div class="animate form login_form">
           <section class="login_content">
-            <form action="php/Login.php" method="post">
+            <form action="php/LoginAprendiz.php" method="post">
               <h1>Ingresar</h1>
               
               <div class="x_panel">
@@ -75,9 +75,6 @@
               </div>
               <div>
                 <input type="password" name="Contrasena" class="form-control" placeholder="Contraseña" required="" />
-              </div>
-              <div>
-                <input type="hidden" name="Pagina" value="../login-Aprendiz.php">
               </div>
               <div>
                 <input type="checkbox" name="Recordar" checked=""><label> Recordarme</label>

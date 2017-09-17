@@ -9,8 +9,8 @@ class Instructor extends Usuario
 	}
 
 	public function Registrarse()
-		{
-			parent::Registrarse("Instructor");
-		}
+	{
+		parent::Registrarse("Instructor");
+	}
 }
  ?>
