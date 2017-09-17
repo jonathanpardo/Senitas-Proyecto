@@ -50,7 +50,8 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
 							<div class="profile_pic">
-								<a href="ActualizarFoto.php"><img src="<?php echo obtenerDatos($_SESSION['Usuario'],'Foto'); ?>" alt="Beto" class="img-circle profile_img">
+								<a href="ActualizarFoto.php"><img src="<?php echo obtenerDatos($_SESSION['Usuario'],'Foto'); ?>" alt="<?php echo  obtenerDatos($_SESSION['Usuario'],'Foto'); ?>" class="img-circle profile_img">
+                  <?php echo obtenerDatos($_SESSION['Usuario'],'Foto'); ?>
 							</div></a>
 							<div class="profile_info">
 								<span>Bienvenido ,</span>
