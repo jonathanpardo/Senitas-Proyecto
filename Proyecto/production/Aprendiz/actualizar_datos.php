@@ -102,7 +102,24 @@
               <div class="menu_section">
                 
                 <ul class="nav side-menu">
-                  <li><a href="Bandeja-de-Entrada.php"><i class="fa fa-bug"></i> Bandeja de Entrada <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="Bandeja-de-Entrada.php"><i class="fa fa-bug"></i> Bandeja de Entrada
+                  <?php
+                  include("../../php/bandejaEntrada.php");
+                  if(mensajessinleer()==1)
+                  {
+                    ?>
+                    <span class="label label-danger pull-right"><?php echo "tienes $tot mensaje nuevo";?></span>
+                    <?php                    
+                  }
+                  else if(mensajessinleer()>1)
+                  {
+                    ?>
+                    <span class="label label-danger pull-right"><?php echo mensajessinleer() . " mensajes nuevos";?></span>
+                    <?php
+                  }
+                  ?>
+                  </a>
+
                     <ul class="nav child_menu">
                       
                     </ul>
