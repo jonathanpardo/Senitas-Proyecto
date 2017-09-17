@@ -26,7 +26,7 @@
 
     function Redireccionar($usuarios){
         if($usuarios["aprendiz"] == null && $usuarios["instructor"]!=null){
-            header("location:../instructor/instructor.html");
+            header("location:../instructor/instructor.php");
         }
         else if($usuarios["aprendiz"] == null && $usuarios["Administrador"] != null)
         {

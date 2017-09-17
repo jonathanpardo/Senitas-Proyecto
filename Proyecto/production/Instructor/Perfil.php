@@ -33,7 +33,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="Instructor.html" class="site_title"><i class="fa fa-hand-o-down"></i> <span>Señitas!</span></a>
+              <a href="Instructor.php" class="site_title"><i class="fa fa-hand-o-down"></i> <span>Señitas!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -57,30 +57,30 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="Instructor.html"><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="Instructor.php"><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                      
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Ejecucucion de la formacion <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Consultar-rutaAprendiz.html">Consultar ruta del Aprendiz</a></li>
-                      <li><a href="Generar-constancia-aprendiz.html">Generar certificado del aprendiz</a></li>
-                      <li><a href="gestionar-ruta-de-aprendizaje.html">Gestion ruta de aprendizaje</a></li>
+                      <li><a href="Consultar-rutaAprendiz.php">Consultar ruta del Aprendiz</a></li>
+                      <li><a href="Generar-constancia-aprendiz.php">Generar certificado del aprendiz</a></li>
+                      <li><a href="gestionar-ruta-de-aprendizaje.php">Gestion ruta de aprendizaje</a></li>
                       
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Gestion de Ambientes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Consultar-Listado-de-aprendices.html">Consultar listado de Aprendices</a></li>
+                      <li><a href="Consultar-Listado-de-aprendices.php">Consultar listado de Aprendices</a></li>
                      
-                      <li><a href="Descargar-Listado-de-Notas.html">descargar Listado de Notas</a></li>
+                      <li><a href="Descargar-Listado-de-Notas.php">descargar Listado de Notas</a></li>
                       
                     </ul>
                   </li>
                   <li><a><i class="fa fa-table"></i> Reportes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Generar-Reporte-Error.html">Generar reportes  de Error</a></li>
+                      <li><a href="Generar-Reporte-Error.php">Generar reportes  de Error</a></li>
                       
                     </ul>
                   </li>
@@ -97,7 +97,7 @@
                     </ul>
                   </li>
                   
-                  <li><a href="Subir-Actividades.html"><i class="fa fa-sitemap"></i> Subir Actividades <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="Subir-Actividades.php"><i class="fa fa-sitemap"></i> Subir Actividades <span class="fa fa-chevron-down"></span></a>
 
               </div>
 
@@ -115,7 +115,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Bloquear">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="login.html">
+              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="login.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -141,7 +141,7 @@
                     <li><a href="javascript:;"> Perfil</a></li>
                     
                     
-                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Cerrar sesión</a></li>
+                    <li><a href="login.php"><i class="fa fa-sign-out pull-right"></i> Cerrar sesión</a></li>
                   </ul>
                 </li>
 
