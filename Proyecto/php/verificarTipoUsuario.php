@@ -8,6 +8,20 @@
                 $registros = $resultado->rowCount();
                 return $registros;     
                 break;            
+            case 'Instructor':
+                $Conexion = Conexion::Conectar();
+                $resultado = $Conexion->prepare("SELECT * FROM usuario WHERE NombreUsuario = :NombreUsuario AND FK_UsuarioInstructor IS NOT NULL");
+                $resultado->execute(array(":NombreUsuario"=>$_SESSION['Usuario']));
+                $registros = $resultado->rowCount();
+                return $registros; 
+                break;
+            case 'Administrador':
+                $Conexion = Conexion::Conectar();
+                $resultado = $Conexion->prepare("SELECT * FROM usuario WHERE NombreUsuario = :NombreUsuario AND FK_UsuarioAdministrador IS NOT NULL");
+                $resultado->execute(array(":NombreUsuario"=>$_SESSION['Usuario']));
+                $registros = $resultado->rowCount();
+                return $registros; 
+                break;
             default:
                 break;
         }
@@ -30,6 +44,13 @@
         }
         else if($usuarios["aprendiz"] == null && $usuarios["Administrador"] != null)
         {
+            header("location:../Administrador/Administrador.php");
+        }
+        else if($usuarios["instructor"] == null && $usuarios["aprendiz"] != null)
+        {
+            header("location:../aprendiz/index-Aprendiz.php");
+        }
+        else if ($usuarios["instructor"] == null && $usuarios["Administrador"] != null) {
             header("location:../Administrador/Administrador.php");
         }
     }

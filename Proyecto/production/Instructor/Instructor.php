@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <?php
+      include('../../php/Sesion.php');
+      include("../../php/DatosUsuario.php");
+      include("../../php/verificarTipoUsuario.php");
+      if(!isset($_SESSION['Usuario'])){
+        header("location:../../login-Instructor.html");
+      }
+      if(numeroUsuarios("Instructor") == 0) {
+          redireccionar(verificarUsuario());
+      }
+    ?>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -116,7 +127,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Bloquear Vista">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="../../login-Aprendiz.php">
+              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="../../php/CerrarSesion.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
