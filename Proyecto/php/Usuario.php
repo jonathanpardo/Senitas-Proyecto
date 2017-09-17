@@ -146,6 +146,9 @@
                         case 'Instructor':
                             header('location: ../production/instructor/instructor.html');
                             break;
+                        case 'Administrador':
+                            header('location: ../production/Administrador/Administrador.html');
+                            break;
                         default:
                             # code...
                             break;
