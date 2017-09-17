@@ -34,7 +34,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="Administrador.html" class="site_title"><i class="fa fa-hand-o-down"></i> <span>Señitas!</span></a>
+              <a href="Administrador.php" class="site_title"><i class="fa fa-hand-o-down"></i> <span>Señitas!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -58,29 +58,29 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="Administrador.html"><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="Administrador.php"><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                      
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Cursos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Crear-Curso.html">Crear Cursos</a></li>
-                      <li><a href="consultar-aprendices.html">Consultar aprendices por curso</a></li>
+                      <li><a href="Crear-Curso.php">Crear Cursos</a></li>
+                      <li><a href="consultar-aprendices.php">Consultar aprendices por curso</a></li>
                       
                       
                     </ul>
                   </li>
                   <li><a><i class="fa fa-desktop"></i> Anuncios <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Crear-Anuncios.html">Crear Anuncios</a></li>
+                      <li><a href="Crear-Anuncios.php">Crear Anuncios</a></li>
                       
                                           
                     </ul>
                   </li>
                   <li><a><i class="fa fa-table"></i> Blog <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Crear-Blog.html">Crear Blog</a></li>
+                      <li><a href="Crear-Blog.php">Crear Blog</a></li>
                       
                     </ul>
                   </li>
@@ -94,7 +94,7 @@
                  
                   <li><a><i class="fa fa-bug"></i> Reportes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Ver-Reportes.html">Ver Reportes de los Aprendices y Instructores</a></li>
+                      <li><a href="Ver-Reportes.php">Ver Reportes de los Aprendices y Instructores</a></li>
                       
                     </ul>
                   </li>
@@ -104,7 +104,7 @@
                   
                   <li><a ><i class="fa fa-wechat"></i> Mensajes <span class="fa fa-chevron-down"></span></a>
                   <ul class="nav child_menu">
-                      <li><a href="Ver-Mensajes.html">Ver Mensajes de los Aprendices y Instructores</a></li>
+                      <li><a href="Ver-Mensajes.php">Ver Mensajes de los Aprendices y Instructores</a></li>
                       
                     </ul>
                    
