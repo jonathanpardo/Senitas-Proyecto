@@ -6,7 +6,7 @@
       include("../../php/DatosUsuario.php");
       include("../../php/verificarTipoUsuario.php");
       if(!isset($_SESSION['Usuario'])){
-        header("location:../../login-Administardor.php");
+        header("location:../../login-Administrador.html");
       }
       if(numeroUsuarios("Administrador") == 0) {
           redireccionar(verificarUsuario());
