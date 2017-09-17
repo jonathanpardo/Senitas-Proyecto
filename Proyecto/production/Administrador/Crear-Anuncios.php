@@ -6,7 +6,7 @@
       include("../../php/DatosUsuario.php");
       include("../../php/verificarTipoUsuario.php");
       if(!isset($_SESSION['Usuario'])){
-        header("location:../../login-Aprendiz.php");
+        header("location:../../login-Administrador.php");
       }
       if(numeroUsuarios("Administrador") == 0) {
           redireccionar(verificarUsuario());
@@ -53,11 +53,11 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="../images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="<?php echo ObtenerDatos($_SESSION['Usuario'],"Foto"); ?>" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <span>Bienvenido</span>
-                <h2>John Doe</h2>
+                <span>Bienvenido Administrador</span>
+                <h2><?php echo ObtenerDatos($_SESSION['Usuario'],"Nombres","Apellidos"); ?></h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -135,7 +135,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Bloquear Vista">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="../../login-Aprendiz.php">
+              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="../../php/CerrarSesion.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -154,7 +154,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="../images/img.jpg" alt="">John Doe
+                    <img src="<?php echo ObtenerDatos($_SESSION['Usuario'],"Foto"); ?>" alt=""><?php echo ObtenerDatos($_SESSION['Usuario'],"Nombres","Apellidos"); ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -163,7 +163,7 @@
                       
                     </li>
                     
-                    <li><a href="../../login-Aprendiz.php"><i class="fa fa-sign-out pull-right"></i> Cerrar sesión</a></li>
+                    <li><a href="../../php/CerrarSesion.php"><i class="fa fa-sign-out pull-right"></i> Cerrar sesión</a></li>
                   </ul>
                 </li>
 
