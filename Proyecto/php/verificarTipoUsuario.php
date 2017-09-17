@@ -53,5 +53,11 @@
         else if ($usuarios["instructor"] == null && $usuarios["Administrador"] != null) {
             header("location:../Administrador/Administrador.php");
         }
+        else if($usuarios["Administrador"] == null && $usuarios["aprendiz"] != null){
+            header("location:../aprendiz/index-Aprendiz.php");
+        }
+        else {
+            header("location:../instructor/instructor.php");
+        }
     }
 ?>
