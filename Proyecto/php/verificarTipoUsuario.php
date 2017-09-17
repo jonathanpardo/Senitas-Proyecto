@@ -30,7 +30,7 @@
         }
         else if($usuarios["aprendiz"] == null && $usuarios["Administrador"] != null)
         {
-            header("location:../Administrador");
+            header("location:../Administrador/Administrador.html");
         }
     }
 ?>
