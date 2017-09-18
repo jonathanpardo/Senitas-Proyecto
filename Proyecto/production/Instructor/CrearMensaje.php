@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <?php
+   <?php
       include('../../php/Sesion.php');
       include("../../php/DatosUsuario.php");
       include("../../php/verificarTipoUsuario.php");
@@ -21,20 +21,21 @@
     <title>Señitas | </title>
 
     <!-- Bootstrap -->
-    <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="../../vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- bootstrap-daterangepicker -->
-    <link href="../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
+    <link href="../../vendors/bootstrap-daterangepicker/daterangepicker.css" rel="stylesheet">
 
     <!-- Custom Theme Style -->
-    <link href="../build/css/custom.min.css" rel="stylesheet">
+    <link href="../../build/css/custom.min.css" rel="stylesheet">
     <!--- Estilos Noticias-->
   
-    <link href="assets/css/Estilo-Noticias.css" rel="stylesheet">
-    <link id="color-scheme" href="assets/css/colors/default.css" rel="stylesheet">
+    <link href="../../assets/css/Estilo-Noticias.css" rel="stylesheet">
+    <link id="color-scheme" href="../../assets/css/colors/default.css" rel="stylesheet">
+    
     <!--- -->    
   </head>
 
@@ -51,14 +52,14 @@
 
             <!-- menu profile quick info -->
             <div class="profile clearfix">
-              <div class="profile_pic">
-                <img src="images/img.jpg" alt="..." class="img-circle profile_img">
-              </div>
-              <div class="profile_info">
-                <span>Bienvenido</span>
-                <h2><?php echo ObtenerDatos($_SESSION['Usuario'],"Nombres","Apellidos"); ?></h2>
-              </div>
-            </div>
+							<div class="profile_pic">
+								<a href="ActualizarFoto.php"><img src="<?php echo obtenerDatos($_SESSION['Usuario'],'Foto'); ?>" alt="Beto" class="img-circle profile_img">
+							</div></a>
+							<div class="profile_info">
+								<span>Bienvenido ,</span>
+								<h2><?php echo obtenerDatos($_SESSION['Usuario'],"Nombres","Apellidos");?></h2>
+							</div>
+						</div>
             <!-- /menu profile quick info -->
 
             <br />
@@ -76,7 +77,7 @@
                   <li><a><i class="fa fa-edit"></i> Ejecucucion de la formacion <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="Consultar-rutaAprendiz.php">Consultar ruta del Aprendiz</a></li>
-                      <li><a href="Generar-constancia-aprendiz.php">Generar certificado del aprendiz</a></li>
+                      <li><a href="Generar-constancia-aprendiz.php">Generar constancia de aprendiz</a></li>
                       <li><a href="gestionar-ruta-de-aprendizaje.php">Gestion ruta de aprendizaje</a></li>
                       
                     </ul>
@@ -84,7 +85,7 @@
                   <li><a><i class="fa fa-desktop"></i> Gestion de Ambientes <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="Consultar-Listado-de-aprendices.php">Consultar listado de Aprendices</a></li>
-                     
+                      
                       <li><a href="Descargar-Listado-de-Notas.php">descargar Listado de Notas</a></li>
                       
                     </ul>
@@ -102,14 +103,15 @@
               <div class="menu_section">
                 
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bug"></i> Bandeja de Entrada <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="Bandeja-de-Entrada.php"><i class="fa fa-bug"></i> Bandeja de Entrada
+                  
+                  </a>
                     <ul class="nav child_menu">
-                      
                     </ul>
                   </li>
                   
                   <li><a href="Subir-Actividades.php"><i class="fa fa-sitemap"></i> Subir Actividades <span class="fa fa-chevron-down"></span></a>
-
+                   
               </div>
 
             </div>
@@ -117,16 +119,16 @@
 
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Perfil">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              <a data-toggle="tooltip" data-placement="top" title="Actualizar Foto" href="ActualizarFoto.php">
+                <span class="fa fa-child" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Pantalla Completa">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              <a data-toggle="tooltip" data-placement="top" title="Actualizar Datos" href="actualizar_datos.php">
+                <span class="fa fa-users" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Bloquear">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              <a data-toggle="tooltip" data-placement="top" title="Borrar Cuenta" href="BorrarCuenta.php">
+                <span class="fa fa-trash"  aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="login.php">
+              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="../../login-Aprendiz.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -145,15 +147,19 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/img.jpg" alt=""><?php echo ObtenerDatos($_SESSION['Usuario'],"Nombres","Apellidos"); ?>
+                    <img src="<?php echo obtenerDatos($_SESSION['Usuario'],'Foto'); ?>" alt=""><?php echo obtenerDatos($_SESSION['Usuario'],"NombreUsuario"); ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Perfil</a></li>
-                    
-                    
-                    <li><a href="login.php"><i class="fa fa-sign-out pull-right"></i> Cerrar sesión</a></li>
-                  </ul>
+										<li>
+										<li><a href="ActualizarFoto.php">Actualizar Foto</a></li>
+											<li><a href="Actualizar_datos.php">Actualizar Datos</a></li>
+											<li><a href="BorrarCuenta.php">Borrar Cuenta</a></li>
+										</li>
+										
+										
+										<li><a href="../../php/CerrarSesion.php"><i class="fa fa-sign-out pull-right"></i> Salir </a></li>
+									</ul>
                 </li>
 
                 
@@ -171,9 +177,39 @@
             
 <section class="module">
           <div class="container">
-            <div class="row">
-             
-             
+             <div class="row">  
+              Menu: <a href="Bandeja-de-Entrada.php">Ver mensajes</a> <br /><br />
+              <form method="post" action="#">
+
+              Para:<br />
+              <input type="text" name="para" required="" /><br />
+              Asunto:<br />
+              <input type="text" name="asunto" required="" /><br />
+              Mensaje:<br />
+              <textarea name="texto" required=""></textarea>
+              <br /><br />
+              <input type="submit" name="enviar" value="Enviar" />
+              </form>        
+              <?php 
+              include("../../php/CrearMensaje.php");
+              if (isset($_POST['enviar']))
+              {
+                if (EnviarMensaje()>0)
+                {
+                  ?>
+                  <div class="row">
+                    <div class="alert alert-success col-sm-3 col-sm-offset-3" style="text-align: center;">
+                      Mensaje enviado correctamente.
+                    </div>
+                  </div>  
+                  <?php
+                }
+                else
+                {
+                  echo "Error al enviar el mensaje";
+                }           
+              }
+              ?>
             </div>
           </div>
         </section>
@@ -190,7 +226,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            Señitas - Tods los derechos recervados <a href="#"></a>
           </div>
           <div class="clearfix"></div>
         </footer>
@@ -199,34 +235,34 @@
     </div>
 
     <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="../../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
+    <script src="../../vendors/nprogress/nprogress.js"></script>
     <!-- Chart.js -->
-    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+    <script src="../../vendors/Chart.js/dist/Chart.min.js"></script>
     <!-- jQuery Sparklines -->
-    <script src="../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+    <script src="../../vendors/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
     <!-- Flot -->
-    <script src="../vendors/Flot/jquery.flot.js"></script>
-    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="../vendors/Flot/jquery.flot.time.js"></script>
-    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../../vendors/Flot/jquery.flot.resize.js"></script>
     <!-- Flot plugins -->
-    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+    <script src="../../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../../vendors/flot.curvedlines/curvedLines.js"></script>
     <!-- DateJS -->
-    <script src="../vendors/DateJS/build/date.js"></script>
+    <script src="../../vendors/DateJS/build/date.js"></script>
     <!-- bootstrap-daterangepicker -->
-    <script src="../vendors/moment/min/moment.min.js"></script>
-    <script src="../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
+    <script src="../../vendors/moment/min/moment.min.js"></script>
+    <script src="../../vendors/bootstrap-daterangepicker/daterangepicker.js"></script>
     
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+    <script src="../../build/js/custom.min.js"></script>
   </body>
 </html>

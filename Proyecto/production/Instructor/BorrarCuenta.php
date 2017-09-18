@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <?php
+  <?php
       include('../../php/Sesion.php');
       include("../../php/DatosUsuario.php");
       include("../../php/bandejaEntrada.php");
@@ -192,90 +191,33 @@
 <section class="module">
           <div class="container">
             <div class="row">
-             
-             <h1>Anuncios:</h1>
-           
-              <div class="col-sm-8 col-sm-offset-1">
-                <div class="post">
-                  <div class="post-thumbnail"><a href="http://www.insor.gov.co/personas-sordas-en-la-construccion-de-paz/"><img src="../../assets/images/Noticia1.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">Personas sordas en la construcción de paz</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">INSOR</a>| 25 de Julio de 2017<a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-                    
-                
-                
-
-                    </div>
-                  </div>
-                  
-                  <div class="post-entry">
-                    <p>
-
-Aunque en los últimos años la población sorda ha logrado importantes avances en temas de inclusión, la deuda histórica que el Estado y la sociedad en su conjunto tienen con esta comunidad sigue siendo grande. Gran parte de la población sorda se siente al margen de los procesos políticos y de los debates que se llevan a cabo en la esfera pública, y de los que, como ciudadanos, deberían participar.</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="http://www.insor.gov.co/personas-sordas-en-la-construccion-de-paz/">LEER MÁS</a></div>
-                </div>
-                
-                <div class="post">
-                  <div class="post-thumbnail"><a href="http://www.insor.gov.co/mas-de-100-entidades-publicas-comprometidas-con-la-atencion-a-la-poblacion-sorda/"><img src="../../assets/images/post-4.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">Más de 100 entidades públicas comprometidas con la atención a la población sorda</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Insor</a>| 23 November | 3 Comments | <a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-
-                    </div>
-                  </div>
-                  
-                  <div class="post-entry">
-                    <p>
-
-A través de la participación de la Subdirección de Promoción y Desarrollo del INSOR en las Ferias Nacionales de Servicio al Ciudadano, hemos facilitado la comunicación y atención de más de 100 entidades públicas a la población sorda, en 24 ciudades y municipios de Colombia, durante los últimos 18 meses.Este importante logro es posible a través de una estrategia en equipo, que involucra a profesionales sordos, oyentes e intérpretes de lengua de señas colombiana, quienes se desplazan a territorio, con varios días de anticipación a la realización de las Ferias Nacionales de Servicio al Ciudadano y se encargan de formar a los funcionarios públicos de las instituciones locales, regionales y nacionales, en el tema “servicio al ciudadano accesible”.br</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="http://www.insor.gov.co/mas-de-100-entidades-publicas-comprometidas-con-la-atencion-a-la-poblacion-sorda/">LEER MÁS</a></div>
-                </div>
-                
-                <div class="post">
-                  <div class="post-thumbnail"><a href="http://www.insor.gov.co/el-insor-celebro-la-inclusion-de-la-lengua/"><img src="../../assets/images/Noticia3.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">El INSOR Celebró la Inclusión de la Lengua de Señas Colombiana como Lengua Nativa</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Insor-</a> <a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-                    
-                    </div>
-                  </div>
-                  
-                  <div class="post-entry">
-                    <p>
-
-El INSOR trabaja por una gestión pública transparente y de calidad en la atención al ciudadano.
-
-Para la transparencia en nuestra gestión, contamos con un Plan Anticorrupción y de Atención al Ciudadano que nos permite asumir acciones preventivas de control a nuestros programas, proyectos y procesos. Con lo que garantizamos un mejor servicio a la población sorda y a la ciudadanía en general...</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="http://www.insor.gov.co/el-insor-celebro-la-inclusion-de-la-lengua/">LEER MÁS</a></div>
-                </div>
-                
-                <div class="post">
-                  <div class="post-thumbnail"><a href="http://www.eltiempo.com/vida/educacion/educacion-inclusiva-en-colombia-96076"><img src="../../assets/images/Noticia4.jpg" alt="Blog-post Thumbnail"/></a></div>
-                  <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#"> Universidad Sergio Arboleda ofrece primeros posgrados para sordos</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Jonathan Alexis Pardo</a>| 23 November | 3 Comments | <a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-                    
-                    </div>
-                  </div>
-                  
-                  <div class="post-entry">
-                    <p>
-
-La Universidad Sergio Arboleda de Bogotá ofrecerá los primeros posgrados en Colombia dirigidos para personas con discapacidad auditiva, según informó la institución educativa. 
-
-Los tres primeros posgrados han sido desarrollados en colaboración con el Instituto Nacional para Sordos (Insor) y todos ellos podrán estudiarse en la Escuela de Educación.. .</p>
-                  </div>
-                  <div class="post-more"><a class="more-link" href="http://www.eltiempo.com/vida/educacion/educacion-inclusiva-en-colombia-96076">LEER MÁS</a></div>
-                </div>
-                <div class="post">
-                  
-                </div>
-                <div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
-              </div>
+              <div class="col-md-12">
+ 
             </div>
+                <form class="form-horizontal form-label-left" action="../../php/BorrarCuenta.php" method="post">
+                  <span class="section" style="text-align: center;">Borrar Cuenta</span>
+                  <div class="item form-group">
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12">Nombre de usuario
+                      </label>
+                      <div class="col-md-6 col-sm-6 col-xs-12">
+                      <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="NombreUsuario" required="required" type="text" value="<?php echo ObtenerDatos($_SESSION['Usuario'],'NombreUsuario'); ?>" readonly >
+                        </div>
+                      </div>
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Contraseña <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <input type="password" name="Contrasena" required="required" class="form-control col-md-7 col-xs-12" placeholder="Contraseña">
+                        </div>
+                      </div>                      
+                      <div class="ln_solid"></div>
+                      <div class="form-group">
+                        <div class="col-md-6 col-md-offset-3">
+                          <input type="submit" name="BorrarCuentar" value="BorrarCuenta" class="btn btn-danger">
+                      </div>
+                  </div>
+                </form>
+          </div>
           </div>
         </section>
 

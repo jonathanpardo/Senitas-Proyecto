@@ -4,6 +4,7 @@
     <?php
       include('../../php/Sesion.php');
       include("../../php/DatosUsuario.php");
+      include("../../php/bandejaEntrada.php");
       include("../../php/verificarTipoUsuario.php");
       if(!isset($_SESSION['Usuario'])){
         header("location:../../login-Instructor.html");
@@ -97,11 +98,26 @@
               <div class="menu_section">
                 
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bug"></i> Bandeja de Entrada <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="Bandeja-de-Entrada.php"><i class="fa fa-bug"></i> Bandeja de Entrada
+                  <?php
+                  if(mensajessinleer()==1)
+                  {
+                    ?>
+                    <span class="label label-danger pull-right"><?php echo "tienes $tot mensaje nuevo";?></span>
+                    <?php
+                  }
+                  else if(mensajessinleer()>1)
+                  {
+                    ?>
+                    <span class="label label-danger pull-right"><?php echo mensajessinleer() . " mensajes nuevos";?></span>
+                    <?php
+                  }
+                  ?>
+                  </a>
                     <ul class="nav child_menu">
-                      
                     </ul>
                   </li>
+                  
                   
                   <li><a href="Subir-Actividades.php"><i class="fa fa-sitemap"></i> Subir Actividades <span class="fa fa-chevron-down"></span></a>
                    
