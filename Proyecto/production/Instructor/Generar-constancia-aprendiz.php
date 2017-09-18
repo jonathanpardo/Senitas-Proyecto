@@ -133,16 +133,16 @@
 
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Perfil">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              <a data-toggle="tooltip" data-placement="top" title="Actualizar Foto" href="ActualizarFoto.php">
+                <span class="fa fa-child" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Pantalla Completa">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              <a data-toggle="tooltip" data-placement="top" title="Actualizar Datos" href="actualizar_datos.php">
+                <span class="fa fa-users" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Bloquear Vista">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              <a data-toggle="tooltip" data-placement="top" title="Borrar Cuenta" href="BorrarCuenta.php">
+                <span class="fa fa-trash"  aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="../../php/CerrarSesion.php">
+              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="../../login-Aprendiz.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -165,13 +165,15 @@
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Perfil</a></li>
-                    <li>
-                      
-                    </li>
-                    
-                    <li><a href="../../php/CerrarSesion.php"><i class="fa fa-sign-out pull-right"></i> Cerrar sesión</a></li>
-                  </ul>
+										<li>
+										<li><a href="ActualizarFoto.php">Actualizar Foto</a></li>
+											<li><a href="Actualizar_datos.php">Actualizar Datos</a></li>
+											<li><a href="BorrarCuenta.php">Borrar Cuenta</a></li>
+										</li>
+
+
+										<li><a href="../../php/CerrarSesion.php"><i class="fa fa-sign-out pull-right"></i> Salir </a></li>
+									</ul>
                 </li>
 
                 
@@ -421,113 +423,14 @@
               </div>
 
                      <div class="col-md-12 col-sm-12 col-xs-12">
-              <div class="x_panel">
-                <div class="x_title">
-                  <h2>Area de Texto<small>Sessions</small></h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Settings 1</a>
-                        </li>
-                        <li><a href="#">Settings 2</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <div id="alerts"></div>
-                  <div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
-                    <div class="btn-group">
-                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                      </ul>
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a data-edit="fontSize 5">
-                            <p style="font-size:17px">Huge</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a data-edit="fontSize 3">
-                            <p style="font-size:14px">Normal</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a data-edit="fontSize 1">
-                            <p style="font-size:11px">Small</p>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
-                      <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
-                      <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
-                      <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="fa fa-list-ul"></i></a>
-                      <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="fa fa-list-ol"></i></a>
-                      <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
-                      <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="fa fa-indent"></i></a>
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
-                      <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
-                      <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
-                      <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="fa fa-link"></i></a>
-                      <div class="dropdown-menu input-append">
-                        <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
-                        <button class="btn" type="button">Add</button>
-                      </div>
-                      <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="fa fa-cut"></i></a>
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
+              <div class="btn-group">
+                      
                       <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
                     </div>
-
-                    <div class="btn-group">
-                      <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
-                      <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
+                    <div class="form-group">
+                      <textarea class="form-control" rows="7" id="message" name="message" placeholder="Descripcion*" required="required" data-validation-required-message="Please enter your message."></textarea>
+                      <p class="help-block text-danger"></p>
                     </div>
-                  </div>
-
-                  <div id="editor-one" class="editor-wrapper"></div>
-
-                  <textarea name="descr" id="descr" style="display:none;"></textarea>
-                  
-                  <br />
-
-                  <div class="ln_solid"></div>
-
-                  <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Área de texto redimensionable</label>
-                    <div class="col-md-9 col-sm-9 col-xs-12">
-                      <textarea class="resizable_textarea form-control" placeholder="Este área de texto redimensiona  modifica automáticamente su altura a medida que rellenas más texto ......"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
 
                       

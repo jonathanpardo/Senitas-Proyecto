@@ -159,10 +159,15 @@
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Perfil</a></li>
-                    
-                    <li><a href="../../php/CerrarSesion.php"><i class="fa fa-sign-out pull-right"></i> Cerrar sesión</a></li>
-                  </ul>
+										<li>
+										<li><a href="ActualizarFoto.php">Actualizar Foto</a></li>
+											<li><a href="Actualizar_datos.php">Actualizar Datos</a></li>
+											<li><a href="BorrarCuenta.php">Borrar Cuenta</a></li>
+										</li>
+
+
+										<li><a href="../../php/CerrarSesion.php"><i class="fa fa-sign-out pull-right"></i> Salir </a></li>
+									</ul>
                 </li>
 
                 
