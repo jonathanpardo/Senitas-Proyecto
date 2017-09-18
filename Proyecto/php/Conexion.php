@@ -5,12 +5,12 @@
 		{
 			try
 			{		
-		    	$Conexion = new PDO('mysql:host=localhost; dbname=id2759632_senitas','id2759632_senitas','123456');
+		    	$Conexion = new PDO('mysql:host=localhost; dbname=senitas','root','');
 		    	$Conexion->exec("SET CHARSET SET utf8");
 			}			
 			catch (Exception $e)
 			{
-				die("Error : " . $e.message());
+				die("Error : " . $e.Message());
 			}
 			return $Conexion;
 		}

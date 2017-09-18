@@ -143,7 +143,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Borrar Cuenta" href="BorrarCuenta.php">
                 <span class="fa fa-trash"  aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="../../login-Aprendiz.php">
+              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="../../php/CerrarSesion.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -196,7 +196,7 @@
               <div class="col-md-12">
  
             </div>
-                <form class="form-horizontal form-label-left" action="../../php/ActualizarDatos.php" method="post">
+                <form class="form-horizontal form-label-left" action="../../php/ActualizarDatos.php" method="POST">
                   <span class="section" style="text-align: center;">Actualizar Datos</span>
                   <div class="item form-group">
                       <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nombres <span class="required">*</span>

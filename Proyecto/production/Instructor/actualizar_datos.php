@@ -198,25 +198,25 @@
                 <form class="form-horizontal form-label-left" action="../../php/ActualizarDatos.php" method="post">
                   <span class="section" style="text-align: center;">Actualizar Datos</span>
                   <div class="item form-group">
-                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Nombres <span class="required">*</span>
+                      <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Nombres">Nombres <span class="required">*</span>
                       </label>
                       <div class="col-md-6 col-sm-6 col-xs-12">
-                      <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="Nombres" required="required" type="text" value="<?php echo ObtenerDatos($_SESSION['Usuario'],'Nombres'); ?>" >
+                      <input class="form-control col-md-7 col-xs-12" name="Nombres" required="required" type="text" value="<?php echo ObtenerDatos($_SESSION['Usuario'],'Nombres'); ?>" >
                         </div>
                       </div>
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="email">Apellidos <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Apellidos">Apellidos <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" id="email" name="Apellidos" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo ObtenerDatos($_SESSION['Usuario'],'Apellidos'); ?>">
+                          <input type="text" name="Apellidos" required="required" class="form-control col-md-7 col-xs-12" value="<?php echo ObtenerDatos($_SESSION['Usuario'],'Apellidos'); ?>">
                         </div>
                       </div>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="occupation">Email <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="Email">Email <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input id="occupation" type="Email" name="Email" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12" value="<?php echo ObtenerDatos($_SESSION['Usuario'],'Email'); ?>">
+                          <input type="Email" name="Email" data-validate-length-range="5,20" class="optional form-control col-md-7 col-xs-12" value="<?php echo ObtenerDatos($_SESSION['Usuario'],'Email'); ?>">
                         </div>
                       </div>
                       
