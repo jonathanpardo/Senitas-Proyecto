@@ -4,6 +4,7 @@
     <?php
       include('../../php/Sesion.php');
       include("../../php/DatosUsuario.php");
+      include("../../php/bandejaEntrada.php");
       include("../../php/verificarTipoUsuario.php");
       if(!isset($_SESSION['Usuario'])){
         header("location:../../login-Instructor.html");
@@ -97,9 +98,23 @@
               <div class="menu_section">
                 
                 <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bug"></i> Bandeja de Entrada <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="Bandeja-de-Entrada.php"><i class="fa fa-bug"></i> Bandeja de Entrada
+                  <?php
+                  if(mensajessinleer()==1)
+                  {
+                    ?>
+                    <span class="label label-danger pull-right"><?php echo "tienes $tot mensaje nuevo";?></span>
+                    <?php
+                  }
+                  else if(mensajessinleer()>1)
+                  {
+                    ?>
+                    <span class="label label-danger pull-right"><?php echo mensajessinleer() . " mensajes nuevos";?></span>
+                    <?php
+                  }
+                  ?>
+                  </a>
                     <ul class="nav child_menu">
-                      
                     </ul>
                   </li>
                   
@@ -112,16 +127,16 @@
 
             <!-- /menu footer buttons -->
             <div class="sidebar-footer hidden-small">
-              <a data-toggle="tooltip" data-placement="top" title="Perfil">
-                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+              <a data-toggle="tooltip" data-placement="top" title="Actualizar Foto" href="ActualizarFoto.php">
+                <span class="fa fa-child" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Pantalla Completa">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
+              <a data-toggle="tooltip" data-placement="top" title="Actualizar Datos" href="actualizar_datos.php">
+                <span class="fa fa-users" aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Bloquear Vista">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
+              <a data-toggle="tooltip" data-placement="top" title="Borrar Cuenta" href="BorrarCuenta.php">
+                <span class="fa fa-trash"  aria-hidden="true"></span>
               </a>
-              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="../../php/CerrarSesion.php">
+              <a data-toggle="tooltip" data-placement="top" title="Cerrar Sesión" href="../../login-Aprendiz.php">
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
