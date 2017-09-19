@@ -185,199 +185,58 @@
           
            <div class="x_panel">
                   <div class="x_title">
-                    <h2>Crear Curso <small></small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
+                    <h2>Crear Curso <small></small></h2>                    
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
                     <div class="right_col" role="main">	
-					<form action="../../php/ActualizarFoto.php" method="post" enctype="multipart/form-data">
-						Selecciona una foto para el curso..<input type="File" name="Archivo" id="upload">
-						<img id="image" width="700" height="300">
-						<input type="Submit" name="Enviar">
-					</form>				
-					<script type="text/javascript"> 
-						document.getElementById("upload").onchange = function() {
-				  		var reader = new FileReader(); //instanciamos el objeto de la api FileReader
-
-				  		reader.onload = function(e) {
-				   		 //
-
-				   		 document.getElementById("image").src = e.target.result;
-				 		 };
-
-				  		// read the image file as a data URL.
-				  		reader.readAsDataURL(this.files[0]);
-						};
-					</script>
-					
-					<form class="form-horizontal form-label-left input_mask">
-                      <p></p>
-
-                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre del Curso">
+					<form action="../../php/CrearCurso.php" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left input_mask" autocomplete="off">
+                                <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre del Curso" name="Nombre">
                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                       </div>
 
                       <div class="x_panel">
                 <div class="x_title">
-                  <h2>Informacion del curso...<small>Sessions</small></h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Settings 1</a>
-                        </li>
-                        <li><a href="#">Settings 2</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
+                  <h2>Descripción del curso</h2>                  
                   <div class="clearfix"></div>
                 </div>
                 <div class="x_content">
-                  <div id="alerts"></div>
-                  <div class="btn-toolbar editor" data-role="editor-toolbar" data-target="#editor-one">
-                    <div class="btn-group">
-                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font"><i class="fa fa-font"></i><b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                      </ul>
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Font Size"><i class="fa fa-text-height"></i>&nbsp;<b class="caret"></b></a>
-                      <ul class="dropdown-menu">
-                        <li>
-                          <a data-edit="fontSize 5">
-                            <p style="font-size:17px">Huge</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a data-edit="fontSize 3">
-                            <p style="font-size:14px">Normal</p>
-                          </a>
-                        </li>
-                        <li>
-                          <a data-edit="fontSize 1">
-                            <p style="font-size:11px">Small</p>
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn" data-edit="bold" title="Bold (Ctrl/Cmd+B)"><i class="fa fa-bold"></i></a>
-                      <a class="btn" data-edit="italic" title="Italic (Ctrl/Cmd+I)"><i class="fa fa-italic"></i></a>
-                      <a class="btn" data-edit="strikethrough" title="Strikethrough"><i class="fa fa-strikethrough"></i></a>
-                      <a class="btn" data-edit="underline" title="Underline (Ctrl/Cmd+U)"><i class="fa fa-underline"></i></a>
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn" data-edit="insertunorderedlist" title="Bullet list"><i class="fa fa-list-ul"></i></a>
-                      <a class="btn" data-edit="insertorderedlist" title="Number list"><i class="fa fa-list-ol"></i></a>
-                      <a class="btn" data-edit="outdent" title="Reduce indent (Shift+Tab)"><i class="fa fa-dedent"></i></a>
-                      <a class="btn" data-edit="indent" title="Indent (Tab)"><i class="fa fa-indent"></i></a>
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn" data-edit="justifyleft" title="Align Left (Ctrl/Cmd+L)"><i class="fa fa-align-left"></i></a>
-                      <a class="btn" data-edit="justifycenter" title="Center (Ctrl/Cmd+E)"><i class="fa fa-align-center"></i></a>
-                      <a class="btn" data-edit="justifyright" title="Align Right (Ctrl/Cmd+R)"><i class="fa fa-align-right"></i></a>
-                      <a class="btn" data-edit="justifyfull" title="Justify (Ctrl/Cmd+J)"><i class="fa fa-align-justify"></i></a>
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn dropdown-toggle" data-toggle="dropdown" title="Hyperlink"><i class="fa fa-link"></i></a>
-                      <div class="dropdown-menu input-append">
-                        <input class="span2" placeholder="URL" type="text" data-edit="createLink" />
-                        <button class="btn" type="button">Add</button>
-                      </div>
-                      <a class="btn" data-edit="unlink" title="Remove Hyperlink"><i class="fa fa-cut"></i></a>
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn" title="Insert picture (or just drag & drop)" id="pictureBtn"><i class="fa fa-picture-o"></i></a>
-                      <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
-                    </div>
-
-                    <div class="btn-group">
-                      <a class="btn" data-edit="undo" title="Undo (Ctrl/Cmd+Z)"><i class="fa fa-undo"></i></a>
-                      <a class="btn" data-edit="redo" title="Redo (Ctrl/Cmd+Y)"><i class="fa fa-repeat"></i></a>
-                    </div>
-                  </div>
-
-                  <div id="editor-one" class="editor-wrapper"></div>
-
-                  <textarea name="descr" id="descr" style="display:none;"></textarea>
-                  
-                  <br />
-
-                  <div class="ln_solid"></div>
-
-                  <div class="form-group">
-                    <label class="control-label col-md-3 col-sm-3 col-xs-12">Área de texto redimensionable</label>
-                    <div class="col-md-9 col-sm-9 col-xs-12">
-                      <textarea class="resizable_textarea form-control" placeholder="Este área de texto redimensiona  modifica automáticamente su altura a medida que rellenas más texto ......"></textarea>
-                    </div>
-                  </div>
+                  <textarea placeholder="Ingresa una descripción..." style="width: 950px; height: 300px" name="Descripcion" maxlength="255"></textarea>
                 </div>
               </div>
                       
-                 <h2>Tema 1: <input type="text" placeholder="Nombre del Tema"><button>+</button></h2>  
+                 <a class="btn btn-primary">Agregar Modulo</a>                          
                  
-                 <button type="submit" class="btn btn-success">Añadir una lección</button>
-                        <button type="submit" class="btn btn-success">Añadir una prueba</button>
-                        
-                <p></p>
-                        
-                 
-                 <h2>Duración  "numero de semanas": <input type="number" name="numero" id="numero" min="1" max="10"> 
-                     
-                <p></p>     
-                      
-                  <h2>numero de estudiantes matriculados: <input type="number" name="numero" id="numero" min="0" max="10">
-                  
-                  <p></p>
-                  
-                   <h2>Maximo numero de estudiantes que puede tomar el curso: <input type="number" name="numero" id="numero" min="10" max="30">
-                  
-                 <p></p>
-                              
-                   <h2>Nro. De veces Para rehacer el curso: <input type="number" name="numero" id="numero" min="0" max="3">
-                         
-                  <p></p>
-                  
-                   <h2>Añadir un Instructor:
-                   <select name="Nombre-Instructor">
-                    
+                 <h2>Duración del curso(num Semanas): <input type="number" name="Duracion" id="numero" min="1" max="10"> 
 
-                    <option>Ricardo CastelBlanco</option>
-
-                    <option>Fabian hernandez</option>
-
-                    <option>Juan luiz guerra</option>
-
+                <h2>Cupos disponibles: <input type="number" name="Cupos" id="numero" min="0" max="30">                  
+                <h2>Añadir un Instructor:
+                <select name="Instructor">
+                    <?php
+                    $Instructores = obtenerInstructores();
+                    foreach ($Instructores as $registros) {
+                      echo "<option>" . $registros['FK_UsuarioInstructor'] . " " . $registros['Nombres'] . " " . $registros['Apellidos'] . "</option>";
+                    }
+                    ?>
                   </select></h2>
-                        
+                        Selecciona una foto para el curso..<input type="File" name="Archivo" id="upload">
+            <img id="image" width="700" height="300">             
+          <script type="text/javascript"> 
+            document.getElementById("upload").onchange = function() {
+              var reader = new FileReader(); //instanciamos el objeto de la api FileReader
+
+              reader.onload = function(e) {
+               //
+
+               document.getElementById("image").src = e.target.result;
+             };
+
+              // read the image file as a data URL.
+              reader.readAsDataURL(this.files[0]);
+            };
+          </script>
                       
                       
                       <div class="ln_solid"></div>

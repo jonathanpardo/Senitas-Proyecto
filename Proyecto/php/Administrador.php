@@ -12,5 +12,11 @@ class Administrador extends Usuario
 	{
 		parent::Registrarse("Administrador");
 	}
+
+	public function CrearCursos($nombreCurso){
+		include("Cursos.php");
+		$curso = new Cursos($nombreCurso);
+		$curso->CrearCurso();
+	}
 }
  ?>
