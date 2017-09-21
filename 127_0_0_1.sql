@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 19-09-2017 a las 15:25:28
+-- Tiempo de generación: 21-09-2017 a las 19:14:30
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -67,7 +67,7 @@ INSERT INTO `aprendiz` (`idAprendiz`, `NombreUsuario`) VALUES
 --
 
 CREATE TABLE `cursos` (
-  `iCursos` int(11) NOT NULL,
+  `idCursos` int(11) NOT NULL,
   `Nombre` varchar(100) CHARACTER SET utf8 COLLATE utf8_spanish_ci NOT NULL,
   `Descripcion` varchar(255) COLLATE utf8_spanish2_ci NOT NULL,
   `Duracion` int(3) NOT NULL,
@@ -75,6 +75,35 @@ CREATE TABLE `cursos` (
   `Instructor` int(5) NOT NULL,
   `Imagen` varchar(100) COLLATE utf8_spanish2_ci NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `cursos`
+--
+
+INSERT INTO `cursos` (`idCursos`, `Nombre`, `Descripcion`, `Duracion`, `Cupos`, `Instructor`, `Imagen`) VALUES
+(1, 'Prueba', 'esto es unha prueba.dsadsadasdas', 5, 5, 1, '../../ImagenesCursos/prueba.jpg'),
+(2, 'hola', 'pudsad', 5, 5, 1, 'sadsadas'),
+(3, 'Prueba22', '2dasdsadsadsadsadsa', 5, 5, 1, '../../ImagenesCursos/prueba22.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `inscripciones`
+--
+
+CREATE TABLE `inscripciones` (
+  `IdInscripciones` int(11) NOT NULL,
+  `Fk_Cursos` int(11) NOT NULL,
+  `Fk_Usuario` int(11) NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `inscripciones`
+--
+
+INSERT INTO `inscripciones` (`IdInscripciones`, `Fk_Cursos`, `Fk_Usuario`) VALUES
+(1, 1, 2),
+(3, 3, 2);
 
 -- --------------------------------------------------------
 
@@ -172,7 +201,13 @@ ALTER TABLE `aprendiz`
 -- Indices de la tabla `cursos`
 --
 ALTER TABLE `cursos`
-  ADD PRIMARY KEY (`iCursos`);
+  ADD PRIMARY KEY (`idCursos`);
+
+--
+-- Indices de la tabla `inscripciones`
+--
+ALTER TABLE `inscripciones`
+  ADD PRIMARY KEY (`IdInscripciones`);
 
 --
 -- Indices de la tabla `instructor`
@@ -210,7 +245,12 @@ ALTER TABLE `aprendiz`
 -- AUTO_INCREMENT de la tabla `cursos`
 --
 ALTER TABLE `cursos`
-  MODIFY `iCursos` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `idCursos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT de la tabla `inscripciones`
+--
+ALTER TABLE `inscripciones`
+  MODIFY `IdInscripciones` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT de la tabla `instructor`
 --
