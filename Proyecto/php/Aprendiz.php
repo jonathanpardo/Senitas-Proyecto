@@ -12,5 +12,12 @@
 		{
 			parent::Registrarse("Aprendiz");
 		}
+
+		public function RegistrarseCursos($Curso,$Usuario)
+		{
+			include("Cursos.php");
+			$curso = new Cursos("","","","","","");
+			$curso->RegistrarCursos($Curso,$Usuario);
+		}
 	}
  ?>

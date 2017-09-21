@@ -230,7 +230,10 @@
             echo $texto[$i] . "<br>";            
           }
           ?>
-        <a class="btn btn-danger btn-circle" href="#">Registrarse</a>
+          <form action="../../php/RegistrarseCursos.php" method="post">
+            <input type="hidden" name="idCursos" value="<?php echo $_GET['id'] ?>">
+            <input type="submit" class="btn btn-danger btn-circle" value="Registrarse"></a>            
+          </form>
 
 				<br><br>
 				<br>
