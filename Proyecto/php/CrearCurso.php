@@ -23,5 +23,5 @@
 	{
 		echo "<script languague= 'javascript'>alert('El tipo de Archivo que se ingresó no es una imagen, intente nuevamente');</script>";
 	}
-	$Administrador->CrearCursos($_POST["Nombre"],$_POST["Descripcion"],$_POST["Duracion"],$_POST["Cupos"],$instructor[0],$Dees);
+	$Administrador->CrearCursos(ucfirst($_POST["Nombre"]),$_POST["Descripcion"],$_POST["Duracion"],$_POST["Cupos"],$instructor[0],$Dees);
 ?>
