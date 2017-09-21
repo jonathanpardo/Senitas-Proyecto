@@ -10,7 +10,7 @@
 			}			
 			catch (Exception $e)
 			{
-				die("Error : " . $e.Message());
+				die("Error : " . $e.GetMessage());
 			}
 			return $Conexion;
 		}

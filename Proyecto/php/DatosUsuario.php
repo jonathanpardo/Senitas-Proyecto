@@ -24,4 +24,16 @@
 			}
 		}
 	}
+
+	function obtenerInstructores()
+	{
+		$instructores = array();
+		$Conexion = Conexion::Conectar();
+		$resultado = $Conexion->prepare("SELECT * FROM USUARIO WHERE FK_USUARIOINSTRUCTOR IS NOT NULL");
+		$resultado->execute();
+		while ($filas = $resultado->fetch(PDO::FETCH_ASSOC)) {
+			$instructores[] = $filas;
+		}
+		return $instructores;
+	}
  ?>

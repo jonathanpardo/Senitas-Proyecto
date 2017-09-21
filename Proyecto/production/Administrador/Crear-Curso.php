@@ -202,120 +202,51 @@
           
            <div class="x_panel">
                   <div class="x_title">
-                    <h2>Crear Curso <small></small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
+                    <h2>Crear Curso <small></small></h2>                    
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
                     <div class="right_col" role="main">	
-					<form action="../../php/ActualizarFoto.php" method="post" enctype="multipart/form-data">
-						Selecciona una foto para el curso..<input type="File" name="Archivo" id="upload">
-						<img id="image" width="700" height="300">
-						<input type="Submit" name="Enviar">
-					</form>				
-					<script type="text/javascript"> 
-						document.getElementById("upload").onchange = function() {
-				  		var reader = new FileReader(); //instanciamos el objeto de la api FileReader
-
-				  		reader.onload = function(e) {
-				   		 //
-
-				   		 document.getElementById("image").src = e.target.result;
-				 		 };
-
-				  		// read the image file as a data URL.
-				  		reader.readAsDataURL(this.files[0]);
-						};
-					</script>
-					
-					<form class="form-horizontal form-label-left input_mask">
-                      <p></p>
-
-                      <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre del Curso">
+					<form action="../../php/CrearCurso.php" method="post" enctype="multipart/form-data" class="form-horizontal form-label-left input_mask" autocomplete="off">
+                                <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Nombre del Curso" name="Nombre">
                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                       </div>
 
                       <div class="x_panel">
                 <div class="x_title">
-                  <h2>Informacion del Curso...</h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  
-                    
-                    <p></p>
-               <div class="btn-group">
                       
-                      <input type="file" data-role="magic-overlay" data-target="#pictureBtn" data-edit="insertImage" />
-                    </div>
-                    <p></p>
-                    <div class="form-group">
-                      <textarea class="form-control" rows="7" id="message" name="message" placeholder="Descripcion del Curso*" required="required" data-validation-required-message="Please enter your message."></textarea>
-                      <p class="help-block text-danger"></p>
-                    </div>
-
-                    </div>
-                  </div>
-                      
-                 <h2>Tema 1: <input type="text" placeholder="Nombre del Tema"><button>+</button></h2>  
+                 <a class="btn btn-primary">Agregar Modulo</a>                          
                  
-                 <button type="submit" class="btn btn-success">Añadir una lección</button>
-                        <button type="submit" class="btn btn-success">Añadir una prueba</button>
-                        
-                <p></p>
-                        
-                 
-                 <h2>Duración  "numero de semanas": <input type="number" name="numero" id="numero" min="1" max="10"> 
-                     
-                <p></p>     
-                      
-                  <h2>numero de estudiantes matriculados: <input type="number" name="numero" id="numero" min="0" max="10">
-                  
-                  <p></p>
-                  
-                   <h2>Maximo numero de estudiantes que puede tomar el curso: <input type="number" name="numero" id="numero" min="10" max="30">
-                  
-                 <p></p>
-                              
-                   <h2>Nro. De veces Para rehacer el curso: <input type="number" name="numero" id="numero" min="0" max="3">
-                         
-                  <p></p>
-                  
-                   <h2>Añadir un Instructor:
-                   <select name="Nombre-Instructor">
-                    
+                 <h2>Duración del curso(num Semanas): <input type="number" name="Duracion" id="numero" min="1" max="10"> 
 
-                    <option>Ricardo CastelBlanco</option>
-
-                    <option>Fabian hernandez</option>
-
-                    <option>Juan luiz guerra</option>
-
+                <h2>Cupos disponibles: <input type="number" name="Cupos" id="numero" min="0" max="30">                  
+                <h2>Añadir un Instructor:
+                <select name="Instructor">
+                    <?php
+                    $Instructores = obtenerInstructores();
+                    foreach ($Instructores as $registros) {
+                      echo "<option>" . $registros['FK_UsuarioInstructor'] . " " . $registros['Nombres'] . " " . $registros['Apellidos'] . "</option>";
+                    }
+                    ?>
                   </select></h2>
-                        
+                        Selecciona una foto para el curso..<input type="File" name="Archivo" id="upload">
+            <img id="image" width="700" height="300">             
+          <script type="text/javascript"> 
+            document.getElementById("upload").onchange = function() {
+              var reader = new FileReader(); //instanciamos el objeto de la api FileReader
+
+              reader.onload = function(e) {
+               //
+
+               document.getElementById("image").src = e.target.result;
+             };
+
+              // read the image file as a data URL.
+              reader.readAsDataURL(this.files[0]);
+            };
+          </script>
                       
                       
                       <div class="ln_solid"></div>
