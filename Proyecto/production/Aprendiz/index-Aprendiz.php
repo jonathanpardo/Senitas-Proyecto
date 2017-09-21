@@ -199,12 +199,6 @@
                   <div class="post-thumbnail"><a href="http://www.insor.gov.co/personas-sordas-en-la-construccion-de-paz/"><img src="../../assets/images/Noticia1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
                     <h2 class="post-title"><a href="#">Personas sordas en la construcción de paz</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">INSOR</a>| 25 de Julio de 2017<a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-
-
-
-
-                    </div>
                   </div>
 
                   <div class="post-entry">
@@ -219,9 +213,6 @@ Aunque en los últimos años la población sorda ha logrado importantes avances 
                   <div class="post-thumbnail"><a href="http://www.insor.gov.co/mas-de-100-entidades-publicas-comprometidas-con-la-atencion-a-la-poblacion-sorda/"><img src="../../assets/images/post-4.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
                     <h2 class="post-title"><a href="#">Más de 100 entidades públicas comprometidas con la atención a la población sorda</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Insor</a>| 23 November | 3 Comments | <a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-
-                    </div>
                   </div>
 
                   <div class="post-entry">
@@ -236,9 +227,6 @@ A través de la participación de la Subdirección de Promoción y Desarrollo de
                   <div class="post-thumbnail"><a href="http://www.insor.gov.co/el-insor-celebro-la-inclusion-de-la-lengua/"><img src="../../assets/images/Noticia3.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
                     <h2 class="post-title"><a href="#">El INSOR Celebró la Inclusión de la Lengua de Señas Colombiana como Lengua Nativa</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Insor-</a> <a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-
-                    </div>
                   </div>
 
                   <div class="post-entry">
@@ -255,9 +243,6 @@ Para la transparencia en nuestra gestión, contamos con un Plan Anticorrupción 
                   <div class="post-thumbnail"><a href="http://www.eltiempo.com/vida/educacion/educacion-inclusiva-en-colombia-96076"><img src="../../assets/images/Noticia4.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
                     <h2 class="post-title"><a href="#"> Universidad Sergio Arboleda ofrece primeros posgrados para sordos</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Jonathan Alexis Pardo</a>| 23 November | 3 Comments | <a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-
-                    </div>
                   </div>
 
                   <div class="post-entry">
