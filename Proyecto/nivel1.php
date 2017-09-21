@@ -96,7 +96,7 @@
                   
                 </ul>
               </li>
-              <li class="dropdown"><a class="dropdown-toggle" href="Cursos.html" data-toggle="dropdown">Cursos</a>
+              <li class="dropdown"><a class="dropdown-toggle" href="Cursos.php" data-toggle="dropdown">Cursos</a>
                 <ul class="dropdown-menu">
                   
                 </ul>
