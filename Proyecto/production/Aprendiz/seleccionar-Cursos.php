@@ -229,6 +229,9 @@
                 
                 <?php 
                 $Cursos = obtenerCursos();
+                if (count($Cursos) == 0) {
+                  echo "No hay cursos disponibles.";
+                }
                 foreach ($Cursos as $registro) {
                   echo "<li><a href='Cursos.php?id=" . $registro["idCursos"] . "'>" . $registro['Nombre'] . "</a></li>";
                 }
