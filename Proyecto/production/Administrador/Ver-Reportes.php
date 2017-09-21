@@ -209,7 +209,7 @@
               while($row = $resultado->fetch(PDO::FETCH_ASSOC)){ ?>
                 <tr bgcolor="<?php if($row['leido'] == "si") { echo "#FFE8E8"; } else { if($i%2==0) { echo "#FFE7CE"; } else { echo "#FFCAB0"; } } ?>">
                   <td align="center" valign="top"><?=$row['idreporte']?></td>
-                  <td align="center" valign="top"><a href="leerReporte.php"?id=<?=$row['idreporte']?>"><?=$row['tipoError']?></a></td>
+                  <td align="center" valign="top"><a href="leerReporte.php?id=<?=$row['idreporte']?>"><?=$row['tipoError']?></a></td>
                   <td align="center" valign="top"><?=$row['de']?></td>
                  <td align="center" valign="top"><?=$row['fecha']?></td>
                 </tr>
