@@ -215,7 +215,7 @@
                   echo "No hay cursos disponibles.";
                 }
                 foreach ($Cursos as $registro) {
-                  echo "<li><a href='Cursos.php?id=" . $registro["idCursos"] . "'>" . $registro['Nombre'] . "</a></li>";
+                  echo "<h4><li><a href='Cursos.php?id=" . $registro["idCursos"] . "'>" . $registro['Nombre'] . "</a></li></h4>";
                 }
                 ?>
                 

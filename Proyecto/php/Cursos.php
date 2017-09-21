@@ -46,15 +46,24 @@
 			while ($filas = $consulta->fetch(PDO::FETCH_ASSOC)) {
 				$id_Usuario = $filas["id_Usuario"];
 			}
-			$resultado = $Conexion->prepare("INSERT INTO INSCRIPCIONES (FK_CURSOS,FK_USUARIO) VALUES(:FK_CURSOS,:FK_USUARIO)");
-			$resultado->execute(array(":FK_CURSOS"=>$curso,":FK_USUARIO"=>$id_Usuario));
-			if($resultado->rowCount()>0)
-			{
-				echo "Inscripcion realizada exitosamente.";
+			$verificarInscripcion = $Conexion->prepare("SELECT * FROM INSCRIPCIONES WHERE FK_USUARIO = :FK_USUARIO");
+			$verificarInscripcion->execute(array(":FK_USUARIO"=>$id_Usuario));
+			if ($verificarInscripcion->rowCount()>0) {
+				echo "<script languague='javascript'>alert('Ya te encuentras registrado en este curso');location.href='../production/aprendiz/seleccionar-Cursos.php'</script>";
 			}
 			else
 			{
-				echo "Error al registrarse en el curso";
+				$resultado = $Conexion->prepare("INSERT INTO INSCRIPCIONES (FK_CURSOS,FK_USUARIO) VALUES(:FK_CURSOS,:FK_USUARIO)");
+				$resultado->execute(array(":FK_CURSOS"=>$curso,":FK_USUARIO"=>$id_Usuario));
+				if($resultado->rowCount()>0)
+				{
+					echo "<script languague = 'javascript'>alert('Inscripcion realizada exitosamente');location.href='../production/aprendiz/index-Aprendiz.php';</script>";
+				}
+				else
+				{
+					echo "Error al registrarse en el curso";
+				}
+				
 			}
 		}
 
