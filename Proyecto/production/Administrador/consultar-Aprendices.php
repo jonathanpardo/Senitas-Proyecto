@@ -4,6 +4,7 @@
     <?php
       include('../../php/Sesion.php');
       include("../../php/DatosUsuario.php");
+      include("../../php/DatosCursos.php");
       include("../../php/bandejaEntrada.php");
       include("../../php/verificarTipoUsuario.php");
       if(!isset($_SESSION['Usuario'])){
@@ -11,6 +12,12 @@
       }
       if(numeroUsuarios("Administrador") == 0) {
           redireccionar(verificarUsuario());
+      }
+      if (!isset($_GET["id"])) {
+        $_GET["id"] = 1;
+      }
+      if (!isset($_GET["Ficha"])) {
+        $_GET["Ficha"] = 1;
       }
     ?>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -195,60 +202,30 @@
           <div class="x_panel">
                   <div class="x_title">
                     <h2>CONSULTAR APRENDICES POR CURSO <small></small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
+                    
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <br />
-                    <form class="form-horizontal form-label-left input_mask">
+                    <form class="form-horizontal form-label-left input_mask" action="" method="GET">
 
                       
                     <h2>FICHAS:
-                       <select name="Nombre-Instructor">
+                       <select name="Ficha">
                     
 
-                        <option>11123144-G1</option>
-
-                        <option>123123241-G2</option>
-
-                        <option>1231414-G3</option>
+                        <?php 
+                          $Cursos = obtenerCursos();
+                          foreach ($Cursos as $registros) {
+                            echo "<option>" . $registros["idCursos"] . " " . $registros["Nombre"] . "</option>";
+                          }
+                        ?>
 
                      </select></h2>
                      
                      
                      
-                     <div class="x_panel">
-                  <div class="x_title">
-                    <h2> <small></small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
+                   
                     <div class="clearfix"></div>
                   </div>
 
@@ -262,13 +239,11 @@
                           <tr class="headings">
                             
                             <th class="column-title">Ficha </th>
-                            <th class="column-title">Fecha inicio </th>
-                            <th class="column-title">Fecha Final </th>
                             <th class="column-title">Nombre </th>
                             <th class="column-title">Apellido </th>
-                            <th class="column-title">cedula </th>
-                            <th class="column-title no-link last"><span class="nobr">Estado de formacion</span>
-                            </th>
+                            <th class="column-title">Nombre usuario</th>
+                            <th class="column-title">Email </th>
+                            <th class="column-title no-link last"><span class="nobr">Estado de formacion</span></th>
                             <th class="bulk-actions" colspan="7">
                               <a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>
                             </th>
@@ -276,120 +251,22 @@
                         </thead>
 
                         <tbody>
-                          <tr class="even pointer">
-                            
-                            <td class=" ">121000040</td>
-                            <td class=" ">May 23, 2014 11:47:56 PM </td>
-                            <td class=" ">May 23, 2014 11:47:56 PM  <i ></i></td>
-                            <td class=" ">John Blank L</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">1000513925</td>
-                            <td class=" last"><a href="#">Activo</a>
+                          <?php
+                            $Aprendices = obtenerUsuariosRegistrados($_GET["id"]);
+                            foreach ($Aprendices as $registros) {
+                              ?>
+                                <tr class="even pointer">                            
+                                <td class=" "><?php echo $registros["Fk_Cursos"] ?></td>
+                                <td class=" "><?php echo $registros["Nombres"] ?></td>
+                                <td class=" "><?php echo $registros["Apellidos"] ?></td>
+                                <td class=" "><?php echo $registros["NombreUsuario"] ?></td>
+                                <td class=" "><?php echo $registros["Email"]; ?></td>
+                                <td class=" last">Activo
                             </td>
-                          </tr>
-                          <tr class="odd pointer">
-                            
-                            <td class=" ">121000039</td>
-                            <td class=" ">May 23, 2014 11:30:12 PM</td>
-                            <td class=" ">May 23, 2014 11:47:56 PM  <i ></i>
-                            </td>
-                            <td class=" ">John Blank L</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">1000513925</td>
-                            <td class=" last"><a href="#">Activo</a>
-                            </td>
-                          </tr>
-                          <tr class="even pointer">
-                            
-                            <td class=" ">121000038</td>
-                            <td class=" ">May 24, 2014 10:55:33 PM</td>
-                            <td class=" ">May 23, 2014 11:47:56 PM  <i ></i>
-                            </td>
-                            <td class=" ">Mike Smith</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">1000513925</td>
-                            <td class=" last"><a href="#">Activo</a>
-                            </td>
-                          </tr>
-                          <tr class="odd pointer">
-                            
-                            <td class=" ">121000037</td>
-                            <td class=" ">May 24, 2014 10:52:44 PM</td>
-                            <td class=" ">May 23, 2014 11:47:56 PM </td>
-                            <td class=" ">Mike Smith</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">1000513925</td>
-                            <td class=" last"><a href="#">Activo</a>
-                            </td>
-                          </tr>
-                          <tr class="even pointer">
-                            
-                            <td class=" ">121000040</td>
-                            <td class=" ">May 24, 2014 11:47:56 PM </td>
-                            <td class=" ">May 23, 2014 11:47:56 PM </td>
-                            <td class=" ">John Blank L</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">1000513925</td>
-                            <td class=" last"><a href="#">Aplazado</a>
-                            </td>
-                          </tr>
-                          <tr class="odd pointer">
-                            
-                            <td class=" ">121000039</td>
-                            <td class=" ">May 26, 2014 11:30:12 PM</td>
-                            <td class=" ">May 23, 2014 11:47:56 PM  <i ></i>
-                            </td>
-                            <td class=" ">John Blank L</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">1000513925</td>
-                            <td class=" last"><a href="#">cancelado</a>
-                            </td>
-                          </tr>
-                          <tr class="even pointer">
-                            
-                            <td class=" ">121000038</td>
-                            <td class=" ">May 26, 2014 10:55:33 PM</td>
-                            <td class=" ">May 23, 2014 11:47:56 PM </td>
-                            <td class=" ">Mike Smith</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">1000513925</td>
-                            <td class=" last"><a href="#">Activo</a>
-                            </td>
-                          </tr>
-                          <tr class="odd pointer">
-                            
-                            <td class=" ">121000037</td>
-                            <td class=" ">May 26, 2014 10:52:44 PM</td>
-                            <td class=" ">May 23, 2014 11:47:56 PM </td>
-                            <td class=" ">Mike Smith</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">1000513925</td>
-                            <td class=" last"><a href="#">Activo</a>
-                            </td>
-                          </tr>
-
-                          <tr class="even pointer">
-                            
-                            <td class=" ">121000040</td>
-                            <td class=" ">May 27, 2014 11:47:56 PM </td>
-                            <td class=" ">May 23, 2014 11:47:56 PM </td>
-                            <td class=" ">John Blank L</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">1000513925</td>
-                            <td class=" last"><a href="#">Activo</a>
-                            </td>
-                          </tr>
-                          <tr class="odd pointer">
-                            
-                            <td class=" ">121000039</td>
-                            <td class=" ">May 28, 2014 11:30:12 PM</td>
-                            <td class=" ">May 23, 2014 11:47:56 PM </td>
-                            <td class=" ">John Blank L</td>
-                            <td class=" ">Paid</td>
-                            <td class="a-right a-right ">1000513925</td>
-                            <td class=" last"><a href="#">Activo</a>
-                            </td>
-                          </tr>
+                          </tr>  
+                          <?php
+                            }
+                          ?>                        
                         </tbody>
                       </table>
                     </div>
@@ -402,10 +279,13 @@
                       
                       <div class="ln_solid"></div>
                       <div class="form-group">
-                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                          <button type="button" class="btn btn-primary">Cancelar</button>
-						   
-                          <button type="submit" class="btn btn-success">Consultar</button>
+                        <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">    
+                          <?php 
+                            $cadena =explode(" ", $_GET["Ficha"]);
+                            $id =  $cadena[0];
+                           ?>
+                          <input type="hidden" name="id" value="<?php echo $id ?>">
+                        <input type="submit" name="Buscar" value="Buscar Ficha" class="btn btn-success">   
                         </div>
                       </div>
 

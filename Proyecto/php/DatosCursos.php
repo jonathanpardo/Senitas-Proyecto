@@ -30,4 +30,20 @@
 			}
 		}
 	}
+
+	function obtenerUsuariosregistrados($idCursos)
+	{
+		include_once("Conexion.php");
+		$Conexion = Conexion::Conectar();
+		$resultado = $Conexion->prepare("SELECT * FROM INSCRIPCIONES INNER JOIN USUARIO ON FK_USUARIO = ID_USUARIO AND FK_CURSOS = :idCursos");
+		$resultado->execute(array(":idCursos"=>$idCursos));
+		$AprendizInscrito = array();
+		while ($fila = $resultado->fetch(PDO::FETCH_ASSOC)) {
+			$AprendizInscrito[] = $fila;
+		}	
+		if ($resultado->rowCount()==0) {
+			echo "aun no se ha registrado nadie en el curso";
+		}
+		return $AprendizInscrito;
+	}
 ?>
