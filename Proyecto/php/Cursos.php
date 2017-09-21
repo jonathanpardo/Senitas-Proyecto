@@ -37,6 +37,27 @@
 	        $Conexion = null;	  
 		}
 
+		public function RegistrarCursos($curso,$usuario)
+		{
+			include_once("Conexion.php");
+			$Conexion = Conexion::Conectar();
+			$consulta = $Conexion->prepare("SELECT id_Usuario FROM USUARIO WHERE NOMBREUSUARIO = :NOMBREUSUARIO");
+			$consulta->execute(array(":NOMBREUSUARIO"=>$usuario));
+			while ($filas = $consulta->fetch(PDO::FETCH_ASSOC)) {
+				$id_Usuario = $filas["id_Usuario"];
+			}
+			$resultado = $Conexion->prepare("INSERT INTO INSCRIPCIONES (FK_CURSOS,FK_USUARIO) VALUES(:FK_CURSOS,:FK_USUARIO)");
+			$resultado->execute(array(":FK_CURSOS"=>$curso,":FK_USUARIO"=>$id_Usuario));
+			if($resultado->rowCount()>0)
+			{
+				echo "Inscripcion realizada exitosamente.";
+			}
+			else
+			{
+				echo "Error al registrarse en el curso";
+			}
+		}
+
 		public function ActualizarCursos()
 		{
 			include('Conexion.php');
