@@ -1,17 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-   <?php
-			include('../../php/Sesion.php');
-			include("../../php/DatosUsuario.php");
-			include("../../php/verificarTipoUsuario.php");
+  <?php
+      include('../../php/Sesion.php');
+      include("../../php/DatosUsuario.php");
+      include("../../php/verificarTipoUsuario.php");
       if(!isset($_SESSION['Usuario'])){
-        header("location:../../login-Aprendiz.php");
+        header("location:../../login-Administrador.html");
       }
-      if(numeroUsuarios("aprendiz") == 0) {
+      if(numeroUsuarios("Administrador") == 0) {
           redireccionar(verificarUsuario());
       }
-		?>
+    ?>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -45,7 +44,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index-Aprendiz.php" class="site_title"><i class="fa fa-hand-o-down"></i> <span>Señitas!</span></a>
+              <a href="Administrador.php" class="site_title"><i class="fa fa-hand-o-down"></i> <span>Señitas!</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -69,29 +68,29 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="index-Aprendiz.php"><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
+                  <li><a href="Administrador.php"><i class="fa fa-home"></i> Inicio <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                      
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> Cursos <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-edit"></i> Cursos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="seleccionar-Cursos.php">Consultar Cursos disponibles</a></li>
-                      
+                      <li><a href="Crear-Curso.php">Crear Cursos</a></li>
+                      <li><a href="consultar-aprendices.php">Consultar aprendices por curso</a></li>
                       
                       
                     </ul>
                   </li>
-                  <li><a href="Mis-Calificaciones.php"><i class="fa fa-edit"></i> Mis Calificaciones <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-desktop"></i> Anuncios <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
+                      <li><a href="Crear-Anuncios.php">Crear Anuncios</a></li>
                       
-                      
+                                          
                     </ul>
                   </li>
-                  
-                  <li><a><i class="fa fa-table"></i> Reportes <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-table"></i> Blog <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="Generar-Reporte-Error.php">Generar reportes  de Error</a></li>
+                      <li><a href="Crear-Blog.php">Crear Blog</a></li>
                       
                     </ul>
                   </li>
@@ -102,28 +101,26 @@
               <div class="menu_section">
                 
                 <ul class="nav side-menu">
-                  <li><a href="Bandeja-de-Entrada.php"><i class="fa fa-bug"></i> Bandeja de Entrada
-                  <?php
-                  include("../../php/bandejaEntrada.php");
-                  if(mensajessinleer()==1)
-                  {
-                    ?>
-                    <span class="label label-danger pull-right"><?php echo "tienes $tot mensaje nuevo";?></span>
-                    <?php                    
-                  }
-                  else if(mensajessinleer()>1)
-                  {
-                    ?>
-                    <span class="label label-danger pull-right"><?php echo mensajessinleer() . " mensajes nuevos";?></span>
-                    <?php
-                  }
-                  ?>
+                 
+                  <li><a><i class="fa fa-bug"></i> Reportes <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="Ver-Reportes.php">Ver Reportes de los Aprendices y Instructores</a></li>
+                      
+                    </ul>
+                  </li>
+                 
+                 
+        
+                  
+                  <li><a href="Ver-Mensajes.php" ><i class="fa fa-wechat"></i> Mensajes
+                  
                   </a>
                     <ul class="nav child_menu">
                     </ul>
                   </li>
-                  
-                  <li><a href="Actividades.php"><i class="fa fa-sitemap"></i> Subir Actividades <span class="fa fa-chevron-down"></span></a>
+                      
+                      
+                    </ul>
                    
               </div>
 
@@ -190,33 +187,24 @@
             
 <section class="module">
           <div class="container">
-            <div class="row">
-                  <form class="form rqst-form" id="requestACall" role="form" method="post" action="php/request_call.php">
-                   <h1>Generar reporte de Error</h1>
-                   <p></p>
-                    <div class="form-group col-sm-6 col-xs-12">
-                      <input class="form-control input-lg" type="text" name="name" placeholder="Nombre"/>
-                    </div>
-                    <div class="form-group col-sm-6 col-xs-12">
-                      <select class="form-control input-lg" name="subject">
-                        <option value="subject1" disabled="" selected="">Tipo de Error</option>
-                        <option value="BusinessConsulting">plataforma</option>
-                        <option value="MarketingStrategy">contraseñas</option>
-                        <option value="TaxesAdvisory">Actividades </option>
-                        <option value="MarketingStrategy">Otro</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                      <textarea class="form-control" rows="7" id="message" name="message" placeholder="Descripcion del Error*" required="required" data-validation-required-message="Please enter your message."></textarea>
-                      <p class="help-block text-danger"></p>
-                    </div>
-                   
-                    <div class="form-group col-sm-6 col-xs-12">
-                      <button class="btn btn-border-w btn-circle btn-block" id="racSubmit" type="submit"><i class="fa fa-paper-plane-o"></i> Enviar</button>
-                    </div>
-                    <div id="requestFormResponse"></div>
-                  </form>
-                </div>
+             <div class="row">
+            <?php include("../../php/leerMensajes.php"); ?>
+            Menu: <a href="Bandeja-de-Entrada.php">Ver mensajes</a> | <a href="crearMensajes.php">Nuevo mensaje</a> <br /><br />
+            <strong>De:</strong> <?=$row['de']?><br />
+            <strong>Fecha:</strong> <?=$row['fecha']?><br />
+            <strong>Asunto:</strong> <?=$row['asunto']?><br /><br />
+            <strong>Mensaje:</strong><br />
+            <?=$row['texto']?>
+
+            <?php 
+            # Avisamos que ya lo leimos
+            if($row['leido'] != "si")
+            {
+              $consulta = $Conexion->prepare("UPDATE mensaje SET leido='si' WHERE IdMensaje=:id");
+              $consulta->execute(array(":id"=>$id));
+            }
+            ?>           
+            </div>
           </div>
         </section>
 
