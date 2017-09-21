@@ -194,22 +194,16 @@
 <section class="module">
           <div class="container">
             <div class="row">
-             
-             <h1>Anuncios Publicados:</h1>
-           
+
+             <h1>Anuncios:</h1>
+
               <div class="col-sm-8 col-sm-offset-1">
                 <div class="post">
                   <div class="post-thumbnail"><a href="http://www.insor.gov.co/personas-sordas-en-la-construccion-de-paz/"><img src="../../assets/images/Noticia1.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
                     <h2 class="post-title"><a href="#">Personas sordas en la construcción de paz</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">INSOR</a>| 25 de Julio de 2017<a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-                    
-                
-                
-
-                    </div>
                   </div>
-                  
+
                   <div class="post-entry">
                     <p>
 
@@ -217,16 +211,13 @@ Aunque en los últimos años la población sorda ha logrado importantes avances 
                   </div>
                   <div class="post-more"><a class="more-link" href="http://www.insor.gov.co/personas-sordas-en-la-construccion-de-paz/">LEER MÁS</a></div>
                 </div>
-                
+
                 <div class="post">
                   <div class="post-thumbnail"><a href="http://www.insor.gov.co/mas-de-100-entidades-publicas-comprometidas-con-la-atencion-a-la-poblacion-sorda/"><img src="../../assets/images/post-4.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
                     <h2 class="post-title"><a href="#">Más de 100 entidades públicas comprometidas con la atención a la población sorda</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Insor</a>| 23 November | 3 Comments | <a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-
-                    </div>
                   </div>
-                  
+
                   <div class="post-entry">
                     <p>
 
@@ -234,16 +225,13 @@ A través de la participación de la Subdirección de Promoción y Desarrollo de
                   </div>
                   <div class="post-more"><a class="more-link" href="http://www.insor.gov.co/mas-de-100-entidades-publicas-comprometidas-con-la-atencion-a-la-poblacion-sorda/">LEER MÁS</a></div>
                 </div>
-                
+
                 <div class="post">
                   <div class="post-thumbnail"><a href="http://www.insor.gov.co/el-insor-celebro-la-inclusion-de-la-lengua/"><img src="../../assets/images/Noticia3.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
                     <h2 class="post-title"><a href="#">El INSOR Celebró la Inclusión de la Lengua de Señas Colombiana como Lengua Nativa</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Insor-</a> <a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-                    
-                    </div>
                   </div>
-                  
+
                   <div class="post-entry">
                     <p>
 
@@ -253,27 +241,24 @@ Para la transparencia en nuestra gestión, contamos con un Plan Anticorrupción 
                   </div>
                   <div class="post-more"><a class="more-link" href="http://www.insor.gov.co/el-insor-celebro-la-inclusion-de-la-lengua/">LEER MÁS</a></div>
                 </div>
-                
+
                 <div class="post">
                   <div class="post-thumbnail"><a href="http://www.eltiempo.com/vida/educacion/educacion-inclusiva-en-colombia-96076"><img src="../../assets/images/Noticia4.jpg" alt="Blog-post Thumbnail"/></a></div>
                   <div class="post-header font-alt">
                     <h2 class="post-title"><a href="#"> Universidad Sergio Arboleda ofrece primeros posgrados para sordos</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Jonathan Alexis Pardo</a>| 23 November | 3 Comments | <a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
-                    
-                    </div>
                   </div>
-                  
+
                   <div class="post-entry">
                     <p>
 
-La Universidad Sergio Arboleda de Bogotá ofrecerá los primeros posgrados en Colombia dirigidos para personas con discapacidad auditiva, según informó la institución educativa. 
+La Universidad Sergio Arboleda de Bogotá ofrecerá los primeros posgrados en Colombia dirigidos para personas con discapacidad auditiva, según informó la institución educativa.
 
 Los tres primeros posgrados han sido desarrollados en colaboración con el Instituto Nacional para Sordos (Insor) y todos ellos podrán estudiarse en la Escuela de Educación.. .</p>
                   </div>
                   <div class="post-more"><a class="more-link" href="http://www.eltiempo.com/vida/educacion/educacion-inclusiva-en-colombia-96076">LEER MÁS</a></div>
                 </div>
                 <div class="post">
-                  
+
                 </div>
                 <div class="pagination font-alt"><a href="#"><i class="fa fa-angle-left"></i></a><a class="active" href="#">1</a><a href="#">2</a><a href="#">3</a><a href="#">4</a><a href="#"><i class="fa fa-angle-right"></i></a></div>
               </div>

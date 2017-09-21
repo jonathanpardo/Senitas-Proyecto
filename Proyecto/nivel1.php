@@ -17,7 +17,7 @@
     Document Title
     =============================================
     -->
-    <title>Titan | Multipurpose HTML5 Template</title>
+    <title>Señitas |</title>
     
     
     <!-- Jquery del Leer mas y estilo  -->
