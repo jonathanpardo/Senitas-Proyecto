@@ -284,7 +284,7 @@
                             $cadena =explode(" ", $_GET["Ficha"]);
                             $id =  $cadena[0];
                            ?>
-                          <input type="hidden" name="id" value="<?php echo $id ?>">
+                          <input type="hidden" name="id" id="id" value="<?php echo $id ?>">
                         <input type="submit" name="Buscar" value="Buscar Ficha" class="btn btn-success">   
                         </div>
                       </div>
