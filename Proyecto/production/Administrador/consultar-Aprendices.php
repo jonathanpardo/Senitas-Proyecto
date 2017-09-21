@@ -4,6 +4,7 @@
     <?php
       include('../../php/Sesion.php');
       include("../../php/DatosUsuario.php");
+      include("../../php/bandejaEntrada.php");
       include("../../php/verificarTipoUsuario.php");
       if(!isset($_SESSION['Usuario'])){
         header("location:../../login-Administrador.html");
@@ -113,11 +114,25 @@
                  
         
                   
-                  <li><a ><i class="fa fa-wechat"></i> Mensajes <span class="fa fa-chevron-down"></span></a>
-                  <ul class="nav child_menu">
-                      <li><a href="Ver-Mensajes.php">Ver Mensajes de los Aprendices y Instructores</a></li>
-                      
+                  <li><a href="Ver-Mensajes.php" ><i class="fa fa-wechat"></i> Mensajes
+                  <?php
+                  if(mensajessinleer()==1)
+                  {
+                    ?>
+                    <span class="label label-danger pull-right"><?php echo "tienes $tot mensaje nuevo";?></span>
+                    <?php
+                  }
+                  else if(mensajessinleer()>1)
+                  {
+                    ?>
+                    <span class="label label-danger pull-right"><?php echo mensajessinleer() . " mensajes nuevos";?></span>
+                    <?php
+                  }
+                  ?>
+                  </a>
+                    <ul class="nav child_menu">
                     </ul>
+                  </li>
                    
               </div>
 
@@ -154,21 +169,25 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?php echo ObtenerDatos($_SESSION['Usuario'],"Foto"); ?>" alt=""><?php echo ObtenerDatos($_SESSION['Usuario'],"Nombres","Apellidos"); ?>
+                    <img src="<?php echo obtenerDatos($_SESSION['Usuario'],'Foto'); ?>" alt=""><?php echo obtenerDatos($_SESSION['Usuario'],"NombreUsuario"); ?>
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="javascript:;"> Perfil</a></li>
-                    <li>
-                      
-                    </li>
-                    
-                    <li><a href="../../php/CerrarSesion.php"><i class="fa fa-sign-out pull-right"></i> Cerrar sesión</a></li>
-                  </ul>
+										<li>
+										<li><a href="ActualizarFoto.php">Actualizar Foto</a></li>
+											<li><a href="Actualizar_datos.php">Actualizar Datos</a></li>
+											<li><a href="BorrarCuenta.php">Borrar Cuenta</a></li>
+										</li>
+										
+										
+										<li><a href="../../php/CerrarSesion.php"><i class="fa fa-sign-out pull-right"></i> Salir </a></li>
+									</ul>
                 </li>
 
                 
               </ul>
+            </nav>
+            </nav>
             </nav>
           </div>
         </div>

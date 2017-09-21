@@ -258,6 +258,30 @@ plataforma.
             </div>
           </div>
         </section>
+        <div class="module-small bg-dark">
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-6 col-md-6 col-lg-4 col-lg-offset-2">
+                <div class="callout-text font-alt">
+                  <h3 class="callout-title">Registrate ahora</h3>
+                  
+                </div>
+              </div>
+              <div class="col-sm-6 col-md-6 col-lg-4">
+                <div class="callout-btn-box">
+                  <form id="subscription-form" role="form" method="post" action="php/subscribe.php">
+                    <div class="input-group">
+                      <span class="input-group-btn">
+                       <a class="btn btn-danger btn-circle" href="login-Aprendiz.php">Registrarse</a>
+                        </span>
+                    </div>
+                  </form>
+                  <div class="text-center" id="subscription-response"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
         <hr class="divider-w">
         <section class="module" id="team">
           <div class="container">
@@ -279,7 +303,7 @@ plataforma.
                     </div>
                   </div>
                   <div class="team-descr font-alt">
-                    <div class="team-name">Tania Ospina</div>
+                    <div class="team-name">Ivan Castro</div>
                     <div class="team-role">Analista</div>
                   </div>
                 </div>
@@ -294,8 +318,8 @@ plataforma.
                     </div>
                   </div>
                   <div class="team-descr font-alt">
-                    <div class="team-name">Daniel Burgos</div>
-                    <div class="team-role">Desarrollador</div>
+                    <div class="team-name">Tania Ospina</div>
+                    <div class="team-role">Analista</div>
                   </div>
                 </div>
               </div>
@@ -309,8 +333,8 @@ plataforma.
                     </div>
                   </div>
                   <div class="team-descr font-alt">
-                    <div class="team-name">Ivan castro</div>
-                    <div class="team-role">Diseñador</div>
+                    <div class="team-name">daniel Burgos</div>
+                    <div class="team-role">Programador</div>
                   </div>
                 </div>
               </div>
@@ -324,25 +348,13 @@ plataforma.
                     </div>
                   </div>
                   <div class="team-descr font-alt">
-                    <div class="team-name">Fernando Florez</div>
-                    <div class="team-role">Analista</div>
+                    <div class="team-name">Jonathan Alexis Pardo</div>
+                    <div class="team-role">Diseñador</div>
                   </div>
                 </div>
               </div>
               <div class="mb-sm-20 wow fadeInUp col-sm-6 col-md-3">
-                <div class="team-item">
-                  <div class="team-image"><img src="assets/images/team-1.jpg" alt="Member Photo"/>
-                    <div class="team-detail">
-                      <h5 class="font-alt">Hola Mundo</h5>
-                      <p class="font-serif">Cuando dices que es difícil, significa que no eres lo suficientemente fuerte como para luchar por ello</p>
-                      <div class="team-social"><a href="#"><i class="fa fa-facebook"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-dribbble"></i></a><a href="#"><i class="fa fa-skype"></i></a></div>
-                    </div>
-                  </div>
-                  <div class="team-descr font-alt">
-                    <div class="team-name">Jonathan pardo</div>
-                    <div class="team-role">diseñador</div>
-                  </div>
-                </div>
+                
               </div>
             </div>
           </div>
@@ -476,64 +488,8 @@ plataforma.
             </div>
           </div>
         </section>
-        <div class="module-small bg-dark">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-md-6 col-lg-4 col-lg-offset-2">
-                <div class="callout-text font-alt">
-                  <h3 class="callout-title">Registrate ahora</h3>
-                  <p>no se enviara spam a tu correo</p>
-                </div>
-              </div>
-              <div class="col-sm-6 col-md-6 col-lg-4">
-                <div class="callout-btn-box">
-                  <form id="subscription-form" role="form" method="post" action="php/subscribe.php">
-                    <div class="input-group">
-                      <span class="input-group-btn">
-                       <a class="btn btn-danger btn-circle" href="login-Aprendiz.php">Registrarse</a>
-                        </span>
-                    </div>
-                  </form>
-                  <div class="text-center" id="subscription-response"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <section class="module" id="contact">
-          <div class="container">
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <h2 class="module-title font-alt">Envianos Un mensaje</h2>
-                <div class="module-subtitle font-serif"></div>
-              </div>
-            </div>
-            <div class="row">
-              <div class="col-sm-6 col-sm-offset-3">
-                <form id="contactForm" role="form" method="post" action="php/contact.php">
-                  <div class="form-group">
-                    <label class="sr-only" for="name">Name</label>
-                    <input class="form-control" type="text" id="name" name="name" placeholder="Nombre*" required="required" data-validation-required-message="Porfavor ingresa tu nombre."/>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <label class="sr-only" for="email">Email</label>
-                    <input class="form-control" type="email" id="email" name="email" placeholder="Email*" required="required" data-validation-required-message="Porfavor ingresa tu direccion de correo."/>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="form-group">
-                    <textarea class="form-control" rows="7" id="message" name="message" placeholder="Mensaje*" required="required" data-validation-required-message="Ingresa el mensaje."></textarea>
-                    <p class="help-block text-danger"></p>
-                  </div>
-                  <div class="text-center">
-                    <button class="btn btn-block btn-round btn-d" id="cfsubmit" type="submit">Enviar</button>
-                  </div>
-                </form>
-                <div class="ajax-response font-alt" id="contactFormResponse"></div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
+        
               <div class="module-small bg-dark">
           <div class="container">
             <div class="row">

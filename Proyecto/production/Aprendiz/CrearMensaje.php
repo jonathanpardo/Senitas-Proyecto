@@ -176,7 +176,7 @@
 <section class="module">
           <div class="container">
              <div class="row">  
-              Menu: <a href="Bandeja-de-Entrada.php">Ver mensajes</a> <br /><br />
+              Menu: <a href="Ver-Mensajes.php">Ver mensajes</a> <br /><br />
               <form method="post" action="#">
 
               Para:<br />
