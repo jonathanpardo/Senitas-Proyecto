@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-09-2017 a las 19:14:30
+-- Tiempo de generación: 21-09-2017 a las 19:53:23
 -- Versión del servidor: 5.7.14
 -- Versión de PHP: 5.6.25
 
@@ -152,6 +152,29 @@ INSERT INTO `mensaje` (`idMensaje`, `para`, `de`, `fecha`, `asunto`, `texto`, `l
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `reporte`
+--
+
+CREATE TABLE `reporte` (
+  `idreporte` int(11) NOT NULL,
+  `tipoError` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
+  `de` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
+  `para` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
+  `fecha` varchar(50) COLLATE utf8_spanish2_ci NOT NULL,
+  `leido` varchar(20) COLLATE utf8_spanish2_ci DEFAULT NULL,
+  `texto` varchar(225) COLLATE utf8_spanish2_ci NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
+
+--
+-- Volcado de datos para la tabla `reporte`
+--
+
+INSERT INTO `reporte` (`idreporte`, `tipoError`, `de`, `para`, `fecha`, `leido`, `texto`) VALUES
+(1, 'tipo1', 'daniel', 'senitas', '21/09/2017, 2:42 pm', NULL, 'fdgfd');
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `usuario`
 --
 
@@ -222,6 +245,12 @@ ALTER TABLE `mensaje`
   ADD PRIMARY KEY (`idMensaje`);
 
 --
+-- Indices de la tabla `reporte`
+--
+ALTER TABLE `reporte`
+  ADD PRIMARY KEY (`idreporte`);
+
+--
 -- Indices de la tabla `usuario`
 --
 ALTER TABLE `usuario`
@@ -261,6 +290,11 @@ ALTER TABLE `instructor`
 --
 ALTER TABLE `mensaje`
   MODIFY `idMensaje` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT de la tabla `reporte`
+--
+ALTER TABLE `reporte`
+  MODIFY `idreporte` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
