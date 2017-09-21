@@ -8,23 +8,29 @@
 		private $instructor;
 		private $imagen;
 
-		function __construct($Nombre)
+		function __construct($Nombre,$Descripcion,$Duracion,$Cupos,$instructor,$imagen)
 		{
-			$this->Nombre = $Nombre;		
+			$this->Nombre = $Nombre;	
+			$this->Descripcion = $Descripcion;
+			$this->Duracion = $Duracion;
+			$this->Cupos = $Cupos;
+			$this->instructor = $instructor;
+			$this->imagen = $imagen;	
 		}
 
 		public function CrearCurso()
 		{
 			include('Conexion.php');
 			$Conexion = Conexion::Conectar();
-			$consulta = $Conexion->prepare("INSERT INTO CURSOS (NOMBRE) VALUES (:NOMBRE)");
-			$consulta->execute(array(":NOMBRE"=>$this->Nombre));
+			$consulta = $Conexion->prepare("INSERT INTO CURSOS (NOMBRE,DESCRIPCION,DURACION,CUPOS,INSTRUCTOR,IMAGEN) VALUES (:NOMBRE,:DESCRIPCION,:DURACION,:CUPOS,:INSTRUCTOR,:IMAGEN)");
+			$consulta->execute(array(":NOMBRE"=>$this->Nombre,":DESCRIPCION"=>$this->Descripcion,":DURACION"=>$this->Duracion,":CUPOS"=>$this->Cupos,":INSTRUCTOR"=>$this->instructor,":IMAGEN"=>$this->imagen));
 			if($consulta->rowCount()>0)
 	        {
 	        	echo "<script languague='javascript'>alert('Cursos creado correctamente');</script>";
 	        }
 	        else
 	        {
+	        	print_r($consulta->errorInfo());
 	        	echo "<script languague='javascript'>alert('Error al crear el curso, intente nuevamente');</script>";
 	        }
 	        $consulta = null;
