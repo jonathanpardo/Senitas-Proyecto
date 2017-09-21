@@ -202,7 +202,7 @@
           
            <div class="x_panel">
                   <div class="x_title">
-                    <h2>Crear Curso <small></small></h2>                    
+                    <h2>Crear Curso</h2>                    
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -214,9 +214,15 @@
                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                       </div>
 
-                      <div class="x_panel">
-                <div class="x_title">
-                      
+              <div class="x_panel">
+                 <div class="x_title">
+                <h2>Descripción del curso</h2>                  
+                 <div class="clearfix"></div>
+              </div>
+               <div class="x_content">
+                 <textarea placeholder="Ingresa una descripción..." style="width: 950px; height: 300px" name="Descripcion" maxlength="255"></textarea>
+               </div>
+             </div>
                  <a class="btn btn-primary">Agregar Modulo</a>                          
                  
                  <h2>Duración del curso(num Semanas): <input type="number" name="Duracion" id="numero" min="1" max="10"> 
