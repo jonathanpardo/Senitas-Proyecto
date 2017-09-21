@@ -77,7 +77,9 @@
                   <li><a><i class="fa fa-edit"></i> Cursos <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="Crear-Curso.php">Crear Cursos</a></li>
+                      <li><a href="ActualizarCursos.php">Actualizar Cursos</a></li>
                       <li><a href="consultar-aprendices.php">Consultar aprendices por curso</a></li>
+                      <li><a href="BorrarCursos.php">Borrar Cursos</a></li>
                       
                       
                     </ul>
