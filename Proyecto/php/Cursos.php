@@ -46,8 +46,8 @@
 			while ($filas = $consulta->fetch(PDO::FETCH_ASSOC)) {
 				$id_Usuario = $filas["id_Usuario"];
 			}
-			$verificarInscripcion = $Conexion->prepare("SELECT * FROM INSCRIPCIONES WHERE FK_USUARIO = :FK_USUARIO");
-			$verificarInscripcion->execute(array(":FK_USUARIO"=>$id_Usuario));
+			$verificarInscripcion = $Conexion->prepare("SELECT * FROM INSCRIPCIONES WHERE FK_USUARIO = :FK_USUARIO AND FK_CURSOS = :FK_CURSOS");
+			$verificarInscripcion->execute(array(":FK_USUARIO"=>$id_Usuario,":FK_CURSOS"=>$curso));
 			if ($verificarInscripcion->rowCount()>0) {
 				echo "<script languague='javascript'>alert('Ya te encuentras registrado en este curso');location.href='../production/aprendiz/seleccionar-Cursos.php'</script>";
 			}
