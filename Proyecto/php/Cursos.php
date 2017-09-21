@@ -26,7 +26,7 @@
 			$consulta->execute(array(":NOMBRE"=>$this->Nombre,":DESCRIPCION"=>$this->Descripcion,":DURACION"=>$this->Duracion,":CUPOS"=>$this->Cupos,":INSTRUCTOR"=>$this->instructor,":IMAGEN"=>$this->imagen));
 			if($consulta->rowCount()>0)
 	        {
-	        	echo "<script languague='javascript'>alert('Cursos creado correctamente');</script>";
+	        	echo "<script languague='javascript'>alert('Cursos creado correctamente'); location.href</script>";
 	        }
 	        else
 	        {

@@ -5,6 +5,7 @@
 			include('../../php/Sesion.php');
 			include("../../php/DatosUsuario.php");
 			include("../../php/verificarTipoUsuario.php");
+      include("../../php/DatosCursos.php");
       if(!isset($_SESSION['Usuario'])){
         header("location:../../login-Aprendiz.php");
       }
@@ -205,10 +206,9 @@
              <h1>Cursos:</h1>
             <div class="col-sm-8 col-sm-offset-1">
                 <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="../../assets/images/cursos.jpg" alt="Blog-post Thumbnail"/></a></div>
+                  <div class="post-thumbnail"><a href="#"><img src="<?php echo obtenerDatosCursos($_GET["id"],"Imagen") ?>" alt="Imagen del curso"/></a></div>
                   <div class="post-header font-alt">
-                    <h2 class="post-title"><a href="#">Lenguaje de señas. Nivel básico</a></h2>
-                    <div class="post-meta">By&nbsp;<a href="#">Jonathan Alexis Pardo</a>| 23 November | 3 Comments | <a href="#">Fotografia, </a><a href="#">daniel Burgos</a>
+                    <h2 class="post-title"><a href="#"><?php echo ucfirst(obtenerDatosCursos($_GET["id"],"Nombre")); ?></a></h2>
                     
                 
 
@@ -217,19 +217,20 @@
                    
                    <article id="contenido">
 			<p>
-				Curso de lenguaje de señas donde aprenderás de forma básica los principales signos o señas que te ayudarán a comunicarte con personas que sufren padecimientos de sorderas desde su nacimiento, y que por ello padecen de grandes dificultades para hablar mediante la voz. De los ítems a tratar en este curso, tenemos: El alfabeto dactilológico, los medios de transporte, la familia, las profesiones, y otros temas relacionados con las señas que vas aprender.
+				<?php
+          $Descripcion = obtenerDatosCursos($_GET["id"],"Descripcion");
+          $texto = explode(".", $Descripcion);
+          echo $texto[0] . "...";
+
+        ?>
 			</p>
 			<p id="oculto">
-			
-
-Acto para aquellas personas interesadas en aprender a hablar mediante este lenguaje de señas, con el objetivo de comunicarse con personas con discapacidad auditiva y del habla.
-<br>
-
-Llegando al final de este curso de lenguajes de señas, podrás implementar de forma básica y sencilla las señas aprendidas durante el proceso de aprendizaje, las cuales te ayudarán a comunicarte con aquellas personas que conozcas con padecimientos auditivos y dificultades al comunicarse.
-              
-              <br><br><br>
-               
-                <a class="btn btn-danger btn-circle" href="#">Registrarse</a>
+          <?php
+          for ($i=1; $i<count($texto); $i++) { 
+            echo $texto[$i] . "<br>";            
+          }
+          ?>
+        <a class="btn btn-danger btn-circle" href="#">Registrarse</a>
 
 				<br><br>
 				<br>

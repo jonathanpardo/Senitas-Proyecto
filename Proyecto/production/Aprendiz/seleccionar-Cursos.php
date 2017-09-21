@@ -5,6 +5,7 @@
 			include('../../php/Sesion.php');
 			include("../../php/DatosUsuario.php");
 			include("../../php/verificarTipoUsuario.php");
+      include("../../php/DatosCursos.php");
       if(!isset($_SESSION['Usuario'])){
         header("location:../../login-Aprendiz.php");
       }
@@ -226,14 +227,12 @@
                   <div class="clearfix"></div>
                 </div>
                 
-                
-                <li><a href="Cursos.php">Curso-1</a></li>
-                <li><a href="Cursos.php">Curso-1</a></li>
-                <li><a href="Cursos.php">Curso-1</a></li>
-                <li><a href="Cursos.php">Curso-1</a></li>
-                <li><a href="Cursos.php">Curso-1</a></li>
-                <li><a href="Cursos.php">Curso-1</a></li>
-                <li><a href="Cursos.php">Curso-1</a></li>
+                <?php 
+                $Cursos = obtenerCursos();
+                foreach ($Cursos as $registro) {
+                  echo "<li><a href='Cursos.php?id=" . $registro["idCursos"] . "'>" . $registro['Nombre'] . "</a></li>";
+                }
+                ?>
                 
                 </div>
             </div>
