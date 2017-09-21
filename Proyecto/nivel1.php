@@ -188,7 +188,7 @@
              <h1>Curso:</h1>
             <div class="col-sm-8 col-sm-offset-1">
                 <div class="post">
-                  <div class="post-thumbnail"><a href="#"><img src="<?php echo obtenerDatosCursos($_GET["id"],"Imagen") ?>" alt="Imagen del curso"/></a></div>
+                  <div class="post-thumbnail"><a href="#"><img src="ImagenesCursos/<?php echo obtenerDatosCursos($_GET['id'],'Nombre') ?>.jpg" alt="Imagen del curso"/></a></div>
                   <div class="post-header font-alt">
                     <h2 class="post-title"><a href="#"><?php echo ucfirst(obtenerDatosCursos($_GET["id"],"Nombre")); ?></a></h2>
                     
@@ -212,7 +212,7 @@
             echo $texto[$i] . "<br>";            
           }
           ?>
-        <a class="btn btn-danger btn-circle" href="#">Registrarse</a>
+        <a class="btn btn-danger btn-circle" href="login-Aprendiz.php">Registrarse</a>
 
 				<br><br>
 				<br>
